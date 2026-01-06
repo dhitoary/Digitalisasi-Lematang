@@ -105,10 +105,35 @@ ul {
 
 /* ===== HERO SECTION ===== */
 .hero {
+    position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
     padding: 100px 20px;
     text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(107, 122, 97, 0.85) 0%, 
+        rgba(150, 165, 140, 0.75) 50%,
+        rgba(180, 193, 169, 0.70) 100%);
+    z-index: 1;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
@@ -129,10 +154,34 @@ ul {
 
 /* ===== PAGE HEADER ===== */
 .page-header {
+    position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: url('../images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
     padding: 60px 20px;
     text-align: center;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(107, 122, 97, 0.80) 0%, 
+        rgba(150, 165, 140, 0.70) 100%);
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 .page-header h1 {
@@ -462,8 +511,35 @@ ul {
 }
 
 .leader-card.main-leader {
+    position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: url('../images/leader-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
+    overflow: hidden;
+}
+
+.leader-card.main-leader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(107, 122, 97, 0.88) 0%, 
+        rgba(150, 165, 140, 0.85) 100%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.leader-card.main-leader .leader-photo,
+.leader-card.main-leader h3,
+.leader-card.main-leader .leader-position,
+.leader-card.main-leader .leader-period {
+    position: relative;
+    z-index: 2;
 }
 
 .leader-photo {
@@ -528,9 +604,34 @@ ul {
 }
 
 .org-box.kepala-desa {
+    position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: url('../images/org-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
     font-size: 1.1rem;
+    overflow: hidden;
+}
+
+.org-box.kepala-desa::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(107, 122, 97, 0.90) 0%, 
+        rgba(150, 165, 140, 0.85) 100%);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.org-box.kepala-desa h4,
+.org-box.kepala-desa p {
+    position: relative;
+    z-index: 2;
 }
 
 .org-box.sekretaris {
@@ -752,15 +853,34 @@ ul {
 }
 
 .tourism-image {
+    position: relative;
     height: 200px;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.tourism-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(107, 122, 97, 0.75) 0%, 
+        rgba(150, 165, 140, 0.65) 100%);
+    z-index: 1;
 }
 
 .image-placeholder {
     font-size: 4rem;
+    position: relative;
+    z-index: 2;
 }
 
 .tourism-card h3 {
@@ -878,12 +998,37 @@ ul {
 }
 
 .cta-box {
+    position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background-image: url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--white);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     margin-top: 3rem;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(107, 122, 97, 0.85) 0%, 
+        rgba(150, 165, 140, 0.75) 100%);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.cta-box h3,
+.cta-box p {
+    position: relative;
+    z-index: 2;
 }
 
 .cta-box h3 {
