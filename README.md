@@ -12,7 +12,7 @@ Website profil resmi Kelurahan Lematang, Kecamatan Tanjung Bintang, Kabupaten La
 
 2. **Profil Desa (profil.html)**
    - Letak geografis dan batas wilayah
-   - Data wilayah dusun (8 dusun)
+   - Data wilayah dusun
    - Luas wilayah per kategori
    - Orbitasi (jarak dengan pusat kegiatan)
    - Data kependudukan dan demografi
