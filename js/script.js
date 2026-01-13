@@ -49,6 +49,143 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href !== '') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+
+    // Scroll-triggered animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Apply animations to various elements
+    const animatedElements = document.querySelectorAll(
+        '.info-card, .quick-link-card, .content-box, .history-content h3, .highlight'
+    );
+
+    animatedElements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = `all 0.6s ease ${index * 0.1}s`;
+        observer.observe(element);
+    });
+
+    // Navbar background change on scroll
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 49, 53, 0.3)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 49, 53, 0.2)';
+            }
+        });
+    }
+
+    // Counter animation for numbers
+    const animateCounter = (element, target, duration = 2000) => {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                element.textContent = target.toLocaleString();
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(start).toLocaleString();
+            }
+        }, 16);
+    };
+
+    // Observe info cards for counter animation
+    const infoCardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const numbers = entry.target.querySelectorAll('strong');
+                numbers.forEach(num => {
+                    const text = num.textContent.replace(/[^\d]/g, '');
+                    if (text && !isNaN(text)) {
+                        const value = parseInt(text);
+                        if (value > 100) {
+                            num.textContent = '0';
+                            setTimeout(() => animateCounter(num, value), 200);
+                        }
+                    }
+                });
+                infoCardObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.info-card').forEach(card => {
+        infoCardObserver.observe(card);
+    });
+
+    // Add parallax effect to hero section
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = scrolled * 0.5;
+            hero.style.transform = `translateY(${parallax}px)`;
+        });
+    }
+
+    // Enhance card icon interaction
+    const cardIcons = document.querySelectorAll('.card-icon');
+    cardIcons.forEach(icon => {
+        icon.parentElement.addEventListener('mouseenter', () => {
+            icon.style.animation = 'none';
+            setTimeout(() => {
+                icon.style.animation = 'float 3s ease-in-out infinite';
+            }, 10);
+        });
+    });
+
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
