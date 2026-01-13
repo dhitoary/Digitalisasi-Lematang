@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c🏡 Website Kelurahan Lematang', 'font-size: 20px; color: #2c5f2d; font-weight: bold;');
     console.log('%cSelamat datang di Website Profil Desa Lematang', 'font-size: 14px; color: #97bc62;');
     console.log('Kecamatan Tanjung Bintang, Kabupaten Lampung Selatan');
-});
+;
 
 // Lazy loading for images (if images are added)
 if ('IntersectionObserver' in window) {
