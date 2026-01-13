@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Scroll-triggered animations
+    // Scroll-triggered animations with stagger effect
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -80px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
@@ -82,43 +82,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Apply animations to various elements
+    // Apply animations to various elements with stagger
     const animatedElements = document.querySelectorAll(
         '.info-card, .quick-link-card, .content-box, .history-content h3, .highlight'
     );
 
     animatedElements.forEach((element, index) => {
         element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = `all 0.6s ease ${index * 0.1}s`;
+        element.style.transform = 'translateY(40px)';
+        element.style.transition = `all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.15}s`;
         observer.observe(element);
     });
 
-    // Navbar background change on scroll
+    // Navbar background change on scroll with class toggle
     const navbar = document.querySelector('.navbar');
     if (navbar) {
+        let lastScroll = 0;
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
                 navbar.style.boxShadow = '0 4px 30px rgba(0, 49, 53, 0.3)';
             } else {
+                navbar.classList.remove('scrolled');
                 navbar.style.boxShadow = '0 2px 20px rgba(0, 49, 53, 0.2)';
             }
+            
+            lastScroll = currentScroll;
         });
     }
 
-    // Counter animation for numbers
-    const animateCounter = (element, target, duration = 2000) => {
+    // Counter animation for numbers with easing
+    const animateCounter = (element, target, duration = 2500) => {
         let start = 0;
-        const increment = target / (duration / 16);
-        const timer = setInterval(() => {
-            start += increment;
-            if (start >= target) {
-                element.textContent = target.toLocaleString();
-                clearInterval(timer);
+        const startTime = performance.now();
+        
+        const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+        
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutQuart(progress);
+            
+            const current = Math.floor(easedProgress * target);
+            element.textContent = current.toLocaleString();
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
             } else {
-                element.textContent = Math.floor(start).toLocaleString();
+                element.textContent = target.toLocaleString();
             }
-        }, 16);
+        };
+        
+        requestAnimationFrame(animate);
     };
 
     // Observe info cards for counter animation
@@ -145,43 +162,63 @@ document.addEventListener('DOMContentLoaded', function() {
         infoCardObserver.observe(card);
     });
 
-    // Add parallax effect to hero section
+    // Add parallax effect to hero section with smoother motion
     const hero = document.querySelector('.hero');
     if (hero) {
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
-            hero.style.transform = `translateY(${parallax}px)`;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const parallax = scrolled * 0.4;
+                    hero.style.transform = `translateY(${parallax}px)`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     }
 
-    // Enhance card icon interaction
+    // Enhance card icon interaction with smoother animations
     const cardIcons = document.querySelectorAll('.card-icon');
     cardIcons.forEach(icon => {
-        icon.parentElement.addEventListener('mouseenter', () => {
-            icon.style.animation = 'none';
-            setTimeout(() => {
-                icon.style.animation = 'float 3s ease-in-out infinite';
-            }, 10);
+        const card = icon.parentElement;
+        
+        card.addEventListener('mouseenter', () => {
+            icon.style.animationPlayState = 'paused';
+            icon.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            icon.style.animationPlayState = 'running';
         });
     });
 
-    // Scroll to top button functionality
+    // Scroll to top button functionality with smooth animation
     const scrollToTopBtn = document.getElementById('scrollToTop');
     if (scrollToTopBtn) {
+        let scrollTimeout;
+        
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('visible');
-            } else {
-                scrollToTopBtn.classList.remove('visible');
-            }
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            }, 100);
         });
 
         scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            const scrollStep = window.pageYOffset / 25;
+            const scrollInterval = setInterval(() => {
+                if (window.pageYOffset > 0) {
+                    window.scrollBy(0, -scrollStep);
+                } else {
+                    clearInterval(scrollInterval);
+                }
+            }, 15);
         });
     }
 });
