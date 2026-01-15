@@ -456,10 +456,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const text = element.textContent.toLowerCase();
             if (text.includes(searchTerm) && searchTerm !== '') {
                 element.style.backgroundColor = 'yellow';
-            } else {
+            } e
                 element.style.backgroundColor = '';
             }
-        });
+        );
     };
 
     // Console welcome message

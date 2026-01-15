@@ -2015,3 +2015,124 @@ ul {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* ===== FOOTER MOTTO STYLE ===== */
+.footer-motto {
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ===== PROFILE PAGE ADDITIONAL STYLES ===== */
+.official-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.official-card {
+    background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--white) 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.official-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+}
+
+.official-card h3 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.official-card p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.kadus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.kadus-card {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.kadus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.kadus-card strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.kadus-card p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.company-card {
+    background: linear-gradient(135deg, var(--white) 0%, var(--tertiary-color) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.company-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--white) 100%);
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .official-grid,
+    .kadus-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .company-grid {
+        grid-template-columns: 1fr;
+    }
+}
