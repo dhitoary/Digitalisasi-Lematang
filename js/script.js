@@ -1,5 +1,72 @@
+// Hero Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.indicator');
+let autoSlideInterval;
+
+function showSlide(index) {
+    // Remove active class from all slides and indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Handle wrapping
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    
+    // Add active class to current slide and indicator
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+    resetAutoSlide();
+}
+
+function goToSlide(index) {
+    showSlide(index);
+    resetAutoSlide();
+}
+
+function autoSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(autoSlide, 5000); // Change slide every 5 seconds
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
 // Navigation Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize slider
+    if (slides.length > 0) {
+        showSlide(0);
+        startAutoSlide();
+        
+        // Pause auto-slide on hover
+        const heroSlider = document.querySelector('.hero-slider');
+        if (heroSlider) {
+            heroSlider.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            
+            heroSlider.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+        }
+    }
+
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
 
