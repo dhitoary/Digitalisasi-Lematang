@@ -1,315 +1,433 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Struktur organisasi pemerintahan dan sejarah kepemimpinan Desa Lematang."
+    />
+    <meta
+      name="keywords"
+      content="Pemerintahan Desa Lematang, Kepala Desa, Struktur Organisasi, Aparatur Desa"
+    />
+    <meta name="author" content="Pemerintah Desa Lematang" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://desalematang.id/pemerintahan.html"
+    />
+    <meta property="og:title" content="Pemerintahan - Desa Lematang" />
+    <meta
+      property="og:description"
+      content="Struktur organisasi dan aparatur pemerintahan Desa Lematang"
+    />
+    <meta property="og:image" content="img/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://desalematang.id/pemerintahan.html"
+    />
+    <meta property="twitter:title" content="Pemerintahan - Desa Lematang" />
+    <meta
+      property="twitter:description"
+      content="Struktur organisasi dan aparatur pemerintahan Desa Lematang"
+    />
+    <meta property="twitter:image" content="img/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+
     <title>Pemerintahan - Desa Lematang</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="img/logo.png" alt="Logo Lematang" class="logo-spin">
-                <h2>Desa Lematang</h2>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="profil.html">Profil Desa</a></li>
-                <li><a href="pemerintahan.html" class="active">Pemerintahan</a></li>
-                <li><a href="lembaga.html">Lembaga</a></li>
-                <li><a href="pariwisata.html">Pariwisata & UMKM</a></li>
-                <li><a href="galeri.html">Galeri Desa</a></li>
-                <li><a href="penghargaan.html">Penghargaan</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-brand">
+          <img src="img/logo.png" alt="Logo Desa Lematang" class="logo-spin" />
+          <h2>Desa Lematang</h2>
         </div>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none">
+            <a href="index.html" role="menuitem">Beranda</a>
+          </li>
+          <li role="none">
+            <a href="profil.html" role="menuitem">Profil Desa</a>
+          </li>
+          <li role="none">
+            <a href="pemerintahan.html" class="active" role="menuitem"
+              >Pemerintahan</a
+            >
+          </li>
+          <li role="none">
+            <a href="lembaga.html" role="menuitem">Lembaga</a>
+          </li>
+          <li role="none">
+            <a href="pariwisata.html" role="menuitem">Pariwisata & UMKM</a>
+          </li>
+          <li role="none">
+            <a href="galeri.html" role="menuitem">Galeri Desa</a>
+          </li>
+          <li role="none">
+            <a href="penghargaan.html" role="menuitem">Penghargaan</a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1>Pemerintahan Desa</h1>
-            <p>Struktur Organisasi dan Sejarah Kepemimpinan Desa Lematang</p>
-        </div>
+      <div class="container">
+        <h1>Pemerintahan Desa</h1>
+        <p>Struktur Organisasi dan Sejarah Kepemimpinan Desa Lematang</p>
+      </div>
     </section>
 
     <!-- Current Leadership -->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">Kepemimpinan Saat Ini</h2>
-            <div class="leadership-current">
-                <div class="leader-card main-leader">
-                    <div class="leader-photo">
-                        <div class="photo-placeholder">👤</div>
-                    </div>
-                    <h3>Fikriyadi</h3>
-                    <p class="leader-position">Kepala Desa</p>
-                    <p class="leader-period">Periode: 2019 - Sekarang</p>
-                </div>
-                <div class="leader-card">
-                    <div class="leader-photo">
-                        <div class="photo-placeholder">👤</div>
-                    </div>
-                    <h3>Ipan Sapriadi</h3>
-                    <p class="leader-position">Sekretaris Desa</p>
-                    <p class="leader-period">Periode: Saat Ini</p>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Kepemimpinan Saat Ini</h2>
+        <div class="leadership-current">
+          <div class="leader-card main-leader">
+            <div class="leader-photo">
+              <div class="photo-placeholder">👤</div>
             </div>
+            <h3>Fikriyadi</h3>
+            <p class="leader-position">Kepala Desa</p>
+            <p class="leader-period">Periode: 2019 - Sekarang</p>
+          </div>
+          <div class="leader-card">
+            <div class="leader-photo">
+              <div class="photo-placeholder">👤</div>
+            </div>
+            <h3>Ipan Sapriadi</h3>
+            <p class="leader-position">Sekretaris Desa</p>
+            <p class="leader-period">Periode: Saat Ini</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Organization Structure -->
     <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Struktur Organisasi Pemerintahan Desa</h2>
-            <div class="content-box">
-                <div class="org-structure">
-                    <div class="org-level level-1">
-                        <div class="org-box kepala-desa">
-                            <h4>Kepala Desa</h4>
-                            <p>FIKRIYADI</p>
-                        </div>
-                    </div>
-                    
-                    <div class="org-level level-2">
-                        <div class="org-box sekretaris">
-                            <h4>Sekretaris Desa</h4>
-                            <p>IPAN SAPRIADI</p>
-                        </div>
-                    </div>
-                    
-                    <div class="org-level level-3">
-                        <div class="org-box">
-                            <h4>Kaur Tata Usaha dan Umum</h4>
-                            <p>ADRIANSYAH</p>
-                        </div>
-                        <div class="org-box">
-                            <h4>Kaur Keuangan</h4>
-                            <p>REVI ANITASARI</p>
-                        </div>
-                        <div class="org-box">
-                            <h4>Kaur Pelayanan</h4>
-                            <p>KURMAN AMINUDIN</p>
-                        </div>
-                    </div>
-                    
-                    <div class="org-level level-4">
-                        <div class="org-box">
-                            <h4>Kasi Pemerintahan</h4>
-                            <p>TEGUH PRIYONO</p>
-                        </div>
-                        <div class="org-box">
-                            <h4>Kasi Kesejahteraan</h4>
-                            <p>MESSY HARTATI</p>
-                        </div>
-                        <div class="org-box">
-                            <h4>Kasi Pelayanan</h4>
-                            <p>TIKA AYU SAPUTRI</p>
-                        </div>
-                    </div>
-                    
-                    <div class="org-level level-5">
-                        <h4 class="section-subtitle">Kepala Dusun</h4>
-                        <div class="kadus-grid">
-                            <div class="org-box kadus">
-                                <h5>Kadus 1</h5>
-                                <p>RONI</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 2</h5>
-                                <p>ZAHRI</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 3</h5>
-                                <p>SUJITO</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 4</h5>
-                                <p>ALPIAN</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 5</h5>
-                                <p>ISMAIL</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 6</h5>
-                                <p>ROMI</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 7</h5>
-                                <p>WIDODO</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 8</h5>
-                                <p>MARDIAN</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 9</h5>
-                                <p>ERPANI</p>
-                            </div>
-                            <div class="org-box kadus">
-                                <h5>Kadus 10</h5>
-                                <p>MUHALIF</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Struktur Organisasi Pemerintahan Desa</h2>
+        <div class="content-box">
+          <div class="org-structure">
+            <div class="org-level level-1">
+              <div class="org-box kepala-desa">
+                <h4>Kepala Desa</h4>
+                <p>FIKRIYADI</p>
+              </div>
             </div>
+
+            <div class="org-level level-2">
+              <div class="org-box sekretaris">
+                <h4>Sekretaris Desa</h4>
+                <p>IPAN SAPRIADI</p>
+              </div>
+            </div>
+
+            <div class="org-level level-3">
+              <div class="org-box">
+                <h4>Kaur Tata Usaha dan Umum</h4>
+                <p>ADRIANSYAH</p>
+              </div>
+              <div class="org-box">
+                <h4>Kaur Keuangan</h4>
+                <p>REVI ANITASARI</p>
+              </div>
+              <div class="org-box">
+                <h4>Kaur Pelayanan</h4>
+                <p>KURMAN AMINUDIN</p>
+              </div>
+            </div>
+
+            <div class="org-level level-4">
+              <div class="org-box">
+                <h4>Kasi Pemerintahan</h4>
+                <p>TEGUH PRIYONO</p>
+              </div>
+              <div class="org-box">
+                <h4>Kasi Kesejahteraan</h4>
+                <p>MESSY HARTATI</p>
+              </div>
+              <div class="org-box">
+                <h4>Kasi Pelayanan</h4>
+                <p>TIKA AYU SAPUTRI</p>
+              </div>
+            </div>
+
+            <div class="org-level level-5">
+              <h4 class="section-subtitle">Kepala Dusun</h4>
+              <div class="kadus-grid">
+                <div class="org-box kadus">
+                  <h5>Kadus 1</h5>
+                  <p>RONI</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 2</h5>
+                  <p>ZAHRI</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 3</h5>
+                  <p>SUJITO</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 4</h5>
+                  <p>ALPIAN</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 5</h5>
+                  <p>ISMAIL</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 6</h5>
+                  <p>ROMI</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 7</h5>
+                  <p>WIDODO</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 8</h5>
+                  <p>MARDIAN</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 9</h5>
+                  <p>ERPANI</p>
+                </div>
+                <div class="org-box kadus">
+                  <h5>Kadus 10</h5>
+                  <p>MUHALIF</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- History of Leaders -->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">Sejarah Kepala Desa/Lurah</h2>
-            <p class="subtitle">Daftar Kepala Desa/Lurah dari Awal Terbentuk hingga Sekarang</p>
-            <div class="content-box">
-                <div class="table-responsive">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Periode</th>
-                                <th>Nama Kepala Desa/Lurah</th>
-                                <th>Masa Jabatan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Sebelum 1958</td>
-                                <td>Tidak Diketahui</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>1958 - 1972</td>
-                                <td>H.M. Akip</td>
-                                <td>14 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>1972 - 1974</td>
-                                <td>H. A. Husein</td>
-                                <td>2 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>1974 - 1975</td>
-                                <td>Yani</td>
-                                <td>1 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>1975 - 1977</td>
-                                <td>Husni</td>
-                                <td>2 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>1977 - 1980</td>
-                                <td>H. Arpan</td>
-                                <td>3 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>1980 - 1988</td>
-                                <td>H. Sutama Abas</td>
-                                <td>8 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>1988 - 1998</td>
-                                <td>H. A. Nurdin</td>
-                                <td>10 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>1998 - 2013</td>
-                                <td>H. Zainuddin Abus</td>
-                                <td>15 Tahun</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>2013 - 2019</td>
-                                <td>Bamba</td>
-                                <td>6 Tahun</td>
-                            </tr>
-                            <tr class="current-leader">
-                                <td>11</td>
-                                <td>2019 - Sekarang</td>
-                                <td><strong>Fikriyadi</strong></td>
-                                <td><strong>7 Tahun+ (Masih Aktif)</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Sejarah Kepala Desa/Lurah</h2>
+        <p class="subtitle">
+          Daftar Kepala Desa/Lurah dari Awal Terbentuk hingga Sekarang
+        </p>
+        <div class="content-box">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Periode</th>
+                  <th>Nama Kepala Desa/Lurah</th>
+                  <th>Masa Jabatan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Sebelum 1958</td>
+                  <td>Tidak Diketahui</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>1958 - 1972</td>
+                  <td>H.M. Akip</td>
+                  <td>14 Tahun</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>1972 - 1974</td>
+                  <td>H. A. Husein</td>
+                  <td>2 Tahun</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>1974 - 1975</td>
+                  <td>Yani</td>
+                  <td>1 Tahun</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>1975 - 1977</td>
+                  <td>Husni</td>
+                  <td>2 Tahun</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>1977 - 1980</td>
+                  <td>H. Arpan</td>
+                  <td>3 Tahun</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>1980 - 1988</td>
+                  <td>H. Sutama Abas</td>
+                  <td>8 Tahun</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>1988 - 1998</td>
+                  <td>H. A. Nurdin</td>
+                  <td>10 Tahun</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>1998 - 2013</td>
+                  <td>H. Zainuddin Abus</td>
+                  <td>15 Tahun</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>2013 - 2019</td>
+                  <td>Bamba</td>
+                  <td>6 Tahun</td>
+                </tr>
+                <tr class="current-leader">
+                  <td>11</td>
+                  <td>2019 - Sekarang</td>
+                  <td><strong>Fikriyadi</strong></td>
+                  <td><strong>7 Tahun+ (Masih Aktif)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Visi Misi (Optional - can be filled with actual data) -->
     <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Visi dan Misi</h2>
-            <div class="vision-mission">
-                <div class="content-box">
-                    <h3>Visi</h3>
-                    <p class="vision-text">
-                        Terwujudnya Desa Lematang yang maju, mandiri, sejahtera, dan berkeadilan 
-                        berbasis pada pembangunan berkelanjutan dengan pemanfaatan teknologi informasi.
-                    </p>
-                </div>
-                <div class="content-box">
-                    <h3>Misi</h3>
-                    <ul class="mission-list">
-                        <li>Meningkatkan kualitas pelayanan publik kepada masyarakat</li>
-                        <li>Mengembangkan perekonomian desa melalui pemberdayaan UMKM</li>
-                        <li>Meningkatkan kualitas infrastruktur dan fasilitas umum</li>
-                        <li>Mengembangkan potensi pariwisata dan pertanian</li>
-                        <li>Memanfaatkan teknologi informasi untuk transparansi dan akuntabilitas pemerintahan</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Visi dan Misi</h2>
+        <div class="vision-mission">
+          <div class="content-box">
+            <h3>Visi</h3>
+            <p class="vision-text">
+              Terwujudnya Desa Lematang yang maju, mandiri, sejahtera, dan
+              berkeadilan berbasis pada pembangunan berkelanjutan dengan
+              pemanfaatan teknologi informasi.
+            </p>
+          </div>
+          <div class="content-box">
+            <h3>Misi</h3>
+            <ul class="mission-list">
+              <li>Meningkatkan kualitas pelayanan publik kepada masyarakat</li>
+              <li>Mengembangkan perekonomian desa melalui pemberdayaan UMKM</li>
+              <li>Meningkatkan kualitas infrastruktur dan fasilitas umum</li>
+              <li>Mengembangkan potensi pariwisata dan pertanian</li>
+              <li>
+                Memanfaatkan teknologi informasi untuk transparansi dan
+                akuntabilitas pemerintahan
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="img/logo.png" alt="Logo Lematang" class="footer-logo">
-                    <h3>Desa Lematang</h3>
-                    <p>Kecamatan Tanjung Bintang<br>Kabupaten Lampung Selatan</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Kontak</h3>
-                    <p>Jl. Ir. Sutami Km 11 Lematang<br>Kecamatan Tanjung Bintang<br>Lampung Selatan</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Lokasi Desa</h3>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3!2d105.3!3d-5.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjQnMDAuMCJTIDEwNcKwMTgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890" width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Jam Pelayanan</h3>
-                    <p>Senin - Jumat: 08:00 - 16:00<br>Sabtu: 08:00 - 12:00</p>
-                </div>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img
+              src="img/logo.png"
+              alt="Logo Desa Lematang"
+              class="footer-logo"
+            />
+            <h3>Desa Lematang</h3>
+            <p>
+              Kecamatan Tanjung Bintang<br />
+              Kabupaten Lampung Selatan<br />
+              Provinsi Lampung
+            </p>
+            <p class="footer-motto">
+              "Bersama Membangun Lematang yang Maju dan Sejahtera"
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Kontak & Alamat</h3>
+            <address>
+              <strong>Kantor Desa:</strong><br />
+              Jl. Ir. Sutami Km 11 Lematang<br />
+              Kecamatan Tanjung Bintang<br />
+              Lampung Selatan, 35365
+            </address>
+          </div>
+          <div class="footer-section">
+            <h3>Lokasi Desa</h3>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3!2d105.3!3d-5.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjQnMDAuMCJTIDEwNcKwMTgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+                width="100%"
+                height="200"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta lokasi Desa Lematang"
+              >
+              </iframe>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Desa Lematang. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Jam Pelayanan</h3>
+            <p>
+              <strong>Senin - Jumat:</strong><br />
+              08:00 - 16:00 WIB<br />
+              <strong>Sabtu:</strong><br />
+              08:00 - 12:00 WIB<br />
+              <strong>Minggu & Tanggal Merah:</strong> Libur
+            </p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Desa Lematang. Seluruh Hak Cipta Dilindungi | Dibuat
+            untuk Masyarakat Lematang
+          </p>
+        </div>
+      </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

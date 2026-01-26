@@ -1,10 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Galeri foto dan dokumentasi kegiatan Desa Lematang."
+    />
+    <meta
+      name="keywords"
+      content="Galeri Desa Lematang, Foto Desa, Dokumentasi Kegiatan, Lampung Selatan"
+    />
+    <meta name="author" content="Pemerintah Desa Lematang" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://desalematang.id/galeri.html" />
+    <meta property="og:title" content="Galeri Desa - Desa Lematang" />
+    <meta
+      property="og:description"
+      content="Dokumentasi foto dan kegiatan di Desa Lematang"
+    />
+    <meta property="og:image" content="img/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://desalematang.id/galeri.html" />
+    <meta property="twitter:title" content="Galeri Desa - Desa Lematang" />
+    <meta
+      property="twitter:description"
+      content="Dokumentasi foto dan kegiatan di Desa Lematang"
+    />
+    <meta property="twitter:image" content="img/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+
     <title>Galeri Desa - Desa Lematang</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+
     <style>
         /* Override untuk memastikan menu putih */
         .nav-menu li a {
@@ -176,25 +222,39 @@
             }
         }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="img/logo.png" alt="Logo Lematang" class="logo-spin">
-                <h2>Desa Lematang</h2>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="profil.html">Profil Desa</a></li>
-                <li><a href="pemerintahan.html">Pemerintahan</a></li>
-                <li><a href="lembaga.html">Lembaga</a></li>
-                <li><a href="pariwisata.html">Pariwisata & UMKM</a></li>
-                <li><a href="galeri.html" class="active">Galeri Desa</a></li>
-                <li><a href="penghargaan.html">Penghargaan</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-brand">
+          <img src="img/logo.png" alt="Logo Desa Lematang" class="logo-spin" />
+          <h2>Desa Lematang</h2>
+        </div>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none">
+            <a href="index.html" role="menuitem">Beranda</a>
+          </li>
+          <li role="none">
+            <a href="profil.html" role="menuitem">Profil Desa</a>
+          </li>
+          <li role="none">
+            <a href="pemerintahan.html" role="menuitem">Pemerintahan</a>
+          </li>
+          <li role="none">
+            <a href="lembaga.html" role="menuitem">Lembaga</a>
+          </li>
+          <li role="none">
+            <a href="pariwisata.html" role="menuitem">Pariwisata & UMKM</a>
+          </li>
+          <li role="none">
+            <a href="galeri.html" class="active" role="menuitem">Galeri Desa</a>
+          </li>
+          <li role="none">
+            <a href="penghargaan.html" role="menuitem">Penghargaan</a>
+          </li>
+        </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -204,10 +264,10 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="page-header-content">
-            <h1>📸 Galeri Desa Lematang</h1>
-            <p>Dokumentasi Kegiatan & Momen Berharga KKN UNILA</p>
-        </div>
+      <div class="container">
+        <h1>Galeri Desa Lematang</h1>
+        <p>Dokumentasi Kegiatan & Momen Berharga KKN UNILA</p>
+      </div>
     </section>
 
     <!-- Gallery Section -->
@@ -345,7 +405,7 @@
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-        ↑
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="js/script.js"></script>

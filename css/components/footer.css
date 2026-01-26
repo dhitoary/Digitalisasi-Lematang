@@ -119,46 +119,51 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   background: var(--gradient-primary);
   color: var(--white);
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  box-shadow: 0 4px 20px rgba(0, 49, 53, 0.3);
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(15, 164, 175, 0.3);
   opacity: 0;
   visibility: hidden;
-  transition: all var(--transition-bounce);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: var(--z-fixed);
-  overflow: hidden;
+}
+
+.scroll-to-top i {
+  transition: transform 0.3s ease;
 }
 
 .scroll-to-top::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: var(--gradient-secondary);
-  transform: scale(0);
   border-radius: 50%;
-  transition: transform var(--transition-bounce);
-}
-
-.scroll-to-top:hover::before {
-  transform: scale(1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .scroll-to-top:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(15, 164, 175, 0.3);
+  box-shadow: 0 6px 25px rgba(15, 164, 175, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.scroll-to-top:hover::before {
+  opacity: 1;
+}
+
+.scroll-to-top:hover i {
+  transform: translateY(-2px);
 }
 
 .scroll-to-top.visible {
@@ -168,5 +173,5 @@
 }
 
 .scroll-to-top:active {
-  transform: translateY(-2px);
+  transform: translateY(-1px) scale(0.95);
 }

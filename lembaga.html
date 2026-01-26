@@ -1,289 +1,425 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Informasi lembaga dan organisasi kemasyarakatan di Desa Lematang."
+    />
+    <meta
+      name="keywords"
+      content="Lembaga Desa Lematang, BPD, PKK, Karang Taruna, LPMD, RT RW"
+    />
+    <meta name="author" content="Pemerintah Desa Lematang" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://desalematang.id/lembaga.html" />
+    <meta property="og:title" content="Lembaga Desa - Desa Lematang" />
+    <meta
+      property="og:description"
+      content="Organisasi dan lembaga kemasyarakatan di Desa Lematang"
+    />
+    <meta property="og:image" content="img/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://desalematang.id/lembaga.html"
+    />
+    <meta property="twitter:title" content="Lembaga Desa - Desa Lematang" />
+    <meta
+      property="twitter:description"
+      content="Organisasi dan lembaga kemasyarakatan di Desa Lematang"
+    />
+    <meta property="twitter:image" content="img/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+
     <title>Lembaga Desa - Desa Lematang</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="img/logo.png" alt="Logo Lematang" class="logo-spin">
-                <h2>Desa Lematang</h2>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="profil.html">Profil Desa</a></li>
-                <li><a href="pemerintahan.html">Pemerintahan</a></li>
-                <li><a href="lembaga.html" class="active">Lembaga</a></li>
-                <li><a href="pariwisata.html">Pariwisata & UMKM</a></li>
-                <li><a href="galeri.html">Galeri Desa</a></li>
-                <li><a href="penghargaan.html">Penghargaan</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-brand">
+          <img src="img/logo.png" alt="Logo Desa Lematang" class="logo-spin" />
+          <h2>Desa Lematang</h2>
         </div>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li role="none">
+            <a href="index.html" role="menuitem">Beranda</a>
+          </li>
+          <li role="none">
+            <a href="profil.html" role="menuitem">Profil Desa</a>
+          </li>
+          <li role="none">
+            <a href="pemerintahan.html" role="menuitem">Pemerintahan</a>
+          </li>
+          <li role="none">
+            <a href="lembaga.html" class="active" role="menuitem">Lembaga</a>
+          </li>
+          <li role="none">
+            <a href="pariwisata.html" role="menuitem">Pariwisata & UMKM</a>
+          </li>
+          <li role="none">
+            <a href="galeri.html" role="menuitem">Galeri Desa</a>
+          </li>
+          <li role="none">
+            <a href="penghargaan.html" role="menuitem">Penghargaan</a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1>Lembaga Desa</h1>
-            <p>Organisasi dan Lembaga Kemasyarakatan di Desa Lematang</p>
-        </div>
+      <div class="container">
+        <h1>Lembaga Desa</h1>
+        <p>Organisasi dan Lembaga Kemasyarakatan di Desa Lematang</p>
+      </div>
     </section>
 
     <!-- BPD Section -->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">Badan Permusyawaratan Desa (BPD)</h2>
-            <div class="content-box">
-                <p>
-                    Badan Permusyawaratan Desa (BPD) adalah lembaga yang melaksanakan fungsi pemerintahan 
-                    yang anggotanya merupakan wakil dari penduduk desa berdasarkan keterwakilan wilayah 
-                    dan ditetapkan secara demokratis.
-                </p>
-                <h3>Tugas dan Fungsi BPD</h3>
-                <ul class="task-list">
-                    <li>Membahas dan menyepakati Rancangan Peraturan Desa bersama Kepala Desa</li>
-                    <li>Menampung dan menyalurkan aspirasi masyarakat desa</li>
-                    <li>Melakukan pengawasan kinerja Kepala Desa</li>
-                    <li>Mengusulkan pengangkatan dan pemberhentian Kepala Desa</li>
-                </ul>
-                
-                <h3 class="mt-4">Struktur BPD Desa Lematang</h3>
-                <div class="lembaga-structure">
-                    <div class="lembaga-card">
-                        <h4>Ketua BPD</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                    <div class="lembaga-card">
-                        <h4>Wakil Ketua</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                    <div class="lembaga-card">
-                        <h4>Sekretaris</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                    <div class="lembaga-card">
-                        <h4>Anggota</h4>
-                        <p>Perwakilan dari 8 Dusun</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Badan Permusyawaratan Desa (BPD)</h2>
+        <div class="content-box">
+          <p>
+            Badan Permusyawaratan Desa (BPD) adalah lembaga yang melaksanakan
+            fungsi pemerintahan yang anggotanya merupakan wakil dari penduduk
+            desa berdasarkan keterwakilan wilayah dan ditetapkan secara
+            demokratis.
+          </p>
+          <h3>Tugas dan Fungsi BPD</h3>
+          <ul class="task-list">
+            <li>
+              Membahas dan menyepakati Rancangan Peraturan Desa bersama Kepala
+              Desa
+            </li>
+            <li>Menampung dan menyalurkan aspirasi masyarakat desa</li>
+            <li>Melakukan pengawasan kinerja Kepala Desa</li>
+            <li>Mengusulkan pengangkatan dan pemberhentian Kepala Desa</li>
+          </ul>
+
+          <h3 class="mt-4">Struktur BPD Desa Lematang</h3>
+          <div class="lembaga-structure">
+            <div class="lembaga-card">
+              <h4>Ketua BPD</h4>
+              <p>(Dapat diisi)</p>
             </div>
+            <div class="lembaga-card">
+              <h4>Wakil Ketua</h4>
+              <p>(Dapat diisi)</p>
+            </div>
+            <div class="lembaga-card">
+              <h4>Sekretaris</h4>
+              <p>(Dapat diisi)</p>
+            </div>
+            <div class="lembaga-card">
+              <h4>Anggota</h4>
+              <p>Perwakilan dari 8 Dusun</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- PKK Section -->
     <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Pemberdayaan Kesejahteraan Keluarga (PKK)</h2>
-            <div class="content-box">
-                <p>
-                    PKK adalah gerakan nasional dalam pembangunan masyarakat yang tumbuh dari bawah 
-                    yang pengelolaannya dari, oleh dan untuk masyarakat menuju terwujudnya keluarga 
-                    yang beriman dan bertakwa kepada Tuhan Yang Maha Esa, berakhlak mulia dan berbudi 
-                    luhur, sehat sejahtera, maju dan mandiri.
-                </p>
-                
-                <h3>10 Program Pokok PKK</h3>
-                <div class="pkk-programs">
-                    <div class="program-item">1. Penghayatan dan Pengamalan Pancasila</div>
-                    <div class="program-item">2. Gotong Royong</div>
-                    <div class="program-item">3. Pangan</div>
-                    <div class="program-item">4. Sandang</div>
-                    <div class="program-item">5. Perumahan dan Tata Laksana Rumah Tangga</div>
-                    <div class="program-item">6. Pendidikan dan Keterampilan</div>
-                    <div class="program-item">7. Kesehatan</div>
-                    <div class="program-item">8. Mengembangkan Kehidupan Berkoperasi</div>
-                    <div class="program-item">9. Kelestarian Lingkungan Hidup</div>
-                    <div class="program-item">10. Perencanaan Sehat</div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Pemberdayaan Kesejahteraan Keluarga (PKK)</h2>
+        <div class="content-box">
+          <p>
+            PKK adalah gerakan nasional dalam pembangunan masyarakat yang tumbuh
+            dari bawah yang pengelolaannya dari, oleh dan untuk masyarakat
+            menuju terwujudnya keluarga yang beriman dan bertakwa kepada Tuhan
+            Yang Maha Esa, berakhlak mulia dan berbudi luhur, sehat sejahtera,
+            maju dan mandiri.
+          </p>
 
-                <h3 class="mt-4">Struktur Tim Penggerak PKK Desa Lematang</h3>
-                <div class="lembaga-structure">
-                    <div class="lembaga-card">
-                        <h4>Ketua Tim Penggerak PKK</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                    <div class="lembaga-card">
-                        <h4>Wakil Ketua</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                    <div class="lembaga-card">
-                        <h4>Sekretaris</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                    <div class="lembaga-card">
-                        <h4>Bendahara</h4>
-                        <p>(Dapat diisi)</p>
-                    </div>
-                </div>
+          <h3>10 Program Pokok PKK</h3>
+          <div class="pkk-programs">
+            <div class="program-item">
+              1. Penghayatan dan Pengamalan Pancasila
             </div>
+            <div class="program-item">2. Gotong Royong</div>
+            <div class="program-item">3. Pangan</div>
+            <div class="program-item">4. Sandang</div>
+            <div class="program-item">
+              5. Perumahan dan Tata Laksana Rumah Tangga
+            </div>
+            <div class="program-item">6. Pendidikan dan Keterampilan</div>
+            <div class="program-item">7. Kesehatan</div>
+            <div class="program-item">
+              8. Mengembangkan Kehidupan Berkoperasi
+            </div>
+            <div class="program-item">9. Kelestarian Lingkungan Hidup</div>
+            <div class="program-item">10. Perencanaan Sehat</div>
+          </div>
+
+          <h3 class="mt-4">Struktur Tim Penggerak PKK Desa Lematang</h3>
+          <div class="lembaga-structure">
+            <div class="lembaga-card">
+              <h4>Ketua Tim Penggerak PKK</h4>
+              <p>(Dapat diisi)</p>
+            </div>
+            <div class="lembaga-card">
+              <h4>Wakil Ketua</h4>
+              <p>(Dapat diisi)</p>
+            </div>
+            <div class="lembaga-card">
+              <h4>Sekretaris</h4>
+              <p>(Dapat diisi)</p>
+            </div>
+            <div class="lembaga-card">
+              <h4>Bendahara</h4>
+              <p>(Dapat diisi)</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Karang Taruna -->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">Karang Taruna</h2>
-            <div class="content-box">
-                <p>
-                    Karang Taruna adalah organisasi sosial wadah pengembangan generasi muda yang tumbuh 
-                    dan berkembang atas dasar kesadaran dan tanggung jawab sosial dari, oleh dan untuk 
-                    masyarakat terutama generasi muda di wilayah desa.
-                </p>
-                
-                <h3>Tujuan Karang Taruna</h3>
-                <ul class="task-list">
-                    <li>Terwujudnya pertumbuhan dan perkembangan kesadaran tanggung jawab sosial setiap generasi muda</li>
-                    <li>Terbentuknya jiwa dan semangat kejuangan generasi muda yang trampil dan berkepribadian</li>
-                    <li>Tumbuhnya potensi dan kemampuan generasi muda dalam menjalani fungsi sosialnya</li>
-                    <li>Tercapainya kesejahteraan sosial yang semakin meningkat bagi generasi muda</li>
-                </ul>
+      <div class="container">
+        <h2 class="section-title">Karang Taruna</h2>
+        <div class="content-box">
+          <p>
+            Karang Taruna adalah organisasi sosial wadah pengembangan generasi
+            muda yang tumbuh dan berkembang atas dasar kesadaran dan tanggung
+            jawab sosial dari, oleh dan untuk masyarakat terutama generasi muda
+            di wilayah desa.
+          </p>
 
-                <h3 class="mt-4">Kegiatan Karang Taruna</h3>
-                <div class="activity-grid">
-                    <div class="activity-card">
-                        <div class="activity-icon">⚽</div>
-                        <h4>Olahraga</h4>
-                        <p>Kegiatan olahraga dan turnamen</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🎨</div>
-                        <h4>Seni & Budaya</h4>
-                        <p>Pengembangan seni dan budaya lokal</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">💼</div>
-                        <h4>Kewirausahaan</h4>
-                        <p>Pelatihan dan pengembangan usaha</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🤝</div>
-                        <h4>Sosial</h4>
-                        <p>Kegiatan bakti sosial kemasyarakatan</p>
-                    </div>
-                </div>
+          <h3>Tujuan Karang Taruna</h3>
+          <ul class="task-list">
+            <li>
+              Terwujudnya pertumbuhan dan perkembangan kesadaran tanggung jawab
+              sosial setiap generasi muda
+            </li>
+            <li>
+              Terbentuknya jiwa dan semangat kejuangan generasi muda yang
+              trampil dan berkepribadian
+            </li>
+            <li>
+              Tumbuhnya potensi dan kemampuan generasi muda dalam menjalani
+              fungsi sosialnya
+            </li>
+            <li>
+              Tercapainya kesejahteraan sosial yang semakin meningkat bagi
+              generasi muda
+            </li>
+          </ul>
+
+          <h3 class="mt-4">Kegiatan Karang Taruna</h3>
+          <div class="activity-grid">
+            <div class="activity-card">
+              <div class="activity-icon">⚽</div>
+              <h4>Olahraga</h4>
+              <p>Kegiatan olahraga dan turnamen</p>
             </div>
+            <div class="activity-card">
+              <div class="activity-icon">🎨</div>
+              <h4>Seni & Budaya</h4>
+              <p>Pengembangan seni dan budaya lokal</p>
+            </div>
+            <div class="activity-card">
+              <div class="activity-icon">💼</div>
+              <h4>Kewirausahaan</h4>
+              <p>Pelatihan dan pengembangan usaha</p>
+            </div>
+            <div class="activity-card">
+              <div class="activity-icon">🤝</div>
+              <h4>Sosial</h4>
+              <p>Kegiatan bakti sosial kemasyarakatan</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- RT/RW -->
     <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Rukun Tetangga (RT) dan Rukun Warga (RW)</h2>
-            <div class="content-box">
-                <p>
-                    RT dan RW adalah lembaga yang dibentuk melalui musyawarah masyarakat setempat 
-                    dalam rangka pelayanan pemerintahan dan kemasyarakatan yang diakui dan dibina 
-                    oleh Pemerintah Desa.
-                </p>
+      <div class="container">
+        <h2 class="section-title">Rukun Tetangga (RT) dan Rukun Warga (RW)</h2>
+        <div class="content-box">
+          <p>
+            RT dan RW adalah lembaga yang dibentuk melalui musyawarah masyarakat
+            setempat dalam rangka pelayanan pemerintahan dan kemasyarakatan yang
+            diakui dan dibina oleh Pemerintah Desa.
+          </p>
 
-                <h3>Pembagian RT di Desa Lematang</h3>
-                <div class="rt-grid">
-                    <div class="rt-card">
-                        <h4>Dusun Lematang Atas</h4>
-                        <p class="rt-count">2 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Jalan Baru/Sutami</h4>
-                        <p class="rt-count">2 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Kampung Sawah</h4>
-                        <p class="rt-count">4 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Lubuk Bais</h4>
-                        <p class="rt-count">3 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Lematang Asri</h4>
-                        <p class="rt-count">4 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Lematang Bawah</h4>
-                        <p class="rt-count">2 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Mojo Songo</h4>
-                        <p class="rt-count">2 RT</p>
-                    </div>
-                    <div class="rt-card">
-                        <h4>Dusun Rilau Gadis</h4>
-                        <p class="rt-count">2 RT</p>
-                    </div>
-                </div>
+          <h3>Pembagian RT di Desa Lematang</h3>
+          <div class="rt-grid">
+            <div class="rt-card">
+              <h4>Dusun Lematang Atas</h4>
+              <p class="rt-count">2 RT</p>
             </div>
+            <div class="rt-card">
+              <h4>Dusun Jalan Baru/Sutami</h4>
+              <p class="rt-count">2 RT</p>
+            </div>
+            <div class="rt-card">
+              <h4>Dusun Kampung Sawah</h4>
+              <p class="rt-count">4 RT</p>
+            </div>
+            <div class="rt-card">
+              <h4>Dusun Lubuk Bais</h4>
+              <p class="rt-count">3 RT</p>
+            </div>
+            <div class="rt-card">
+              <h4>Dusun Lematang Asri</h4>
+              <p class="rt-count">4 RT</p>
+            </div>
+            <div class="rt-card">
+              <h4>Dusun Lematang Bawah</h4>
+              <p class="rt-count">2 RT</p>
+            </div>
+            <div class="rt-card">
+              <h4>Dusun Mojo Songo</h4>
+              <p class="rt-count">2 RT</p>
+            </div>
+            <div class="rt-card">
+              <h4>Dusun Rilau Gadis</h4>
+              <p class="rt-count">2 RT</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Other Organizations -->
     <section class="section">
-        <div class="container">
-            <h2 class="section-title">Lembaga dan Organisasi Lainnya</h2>
-            <div class="other-orgs">
-                <div class="org-card">
-                    <div class="org-icon">🕌</div>
-                    <h3>Lembaga Pemberdayaan Masyarakat (LPM)</h3>
-                    <p>Mitra kerja pemerintah desa dalam menampung dan mewujudkan aspirasi serta kebutuhan masyarakat</p>
-                </div>
-                <div class="org-card">
-                    <div class="org-icon">📚</div>
-                    <h3>Pos Pelayanan Terpadu (Posyandu)</h3>
-                    <p>Pelayanan kesehatan dasar untuk ibu dan anak</p>
-                </div>
-                <div class="org-card">
-                    <div class="org-icon">🌾</div>
-                    <h3>Kelompok Tani</h3>
-                    <p>Wadah bagi petani untuk meningkatkan produktivitas pertanian</p>
-                </div>
-                <div class="org-card">
-                    <div class="org-icon">👨‍👩‍👧</div>
-                    <h3>Dasawisma</h3>
-                    <p>Kelompok 10 keluarga yang merupakan kelompok terkecil dari PKK</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Lembaga dan Organisasi Lainnya</h2>
+        <div class="other-orgs">
+          <div class="org-card">
+            <div class="org-icon">🕌</div>
+            <h3>Lembaga Pemberdayaan Masyarakat (LPM)</h3>
+            <p>
+              Mitra kerja pemerintah desa dalam menampung dan mewujudkan
+              aspirasi serta kebutuhan masyarakat
+            </p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">📚</div>
+            <h3>Pos Pelayanan Terpadu (Posyandu)</h3>
+            <p>Pelayanan kesehatan dasar untuk ibu dan anak</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">🌾</div>
+            <h3>Kelompok Tani</h3>
+            <p>Wadah bagi petani untuk meningkatkan produktivitas pertanian</p>
+          </div>
+          <div class="org-card">
+            <div class="org-icon">👨‍👩‍👧</div>
+            <h3>Dasawisma</h3>
+            <p>
+              Kelompok 10 keluarga yang merupakan kelompok terkecil dari PKK
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="img/logo.png" alt="Logo Lematang" class="footer-logo">
-                    <h3>Desa Lematang</h3>
-                    <p>Kecamatan Tanjung Bintang<br>Kabupaten Lampung Selatan</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Kontak</h3>
-                    <p>Jl. Ir. Sutami Km 11 Lematang<br>Kecamatan Tanjung Bintang<br>Lampung Selatan</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Lokasi Desa</h3>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3!2d105.3!3d-5.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjQnMDAuMCJTIDEwNcKwMTgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890" width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Jam Pelayanan</h3>
-                    <p>Senin - Jumat: 08:00 - 16:00<br>Sabtu: 08:00 - 12:00</p>
-                </div>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <img
+              src="img/logo.png"
+              alt="Logo Desa Lematang"
+              class="footer-logo"
+            />
+            <h3>Desa Lematang</h3>
+            <p>
+              Kecamatan Tanjung Bintang<br />
+              Kabupaten Lampung Selatan<br />
+              Provinsi Lampung
+            </p>
+            <p class="footer-motto">
+              "Bersama Membangun Lematang yang Maju dan Sejahtera"
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Kontak & Alamat</h3>
+            <address>
+              <strong>Kantor Desa:</strong><br />
+              Jl. Ir. Sutami Km 11 Lematang<br />
+              Kecamatan Tanjung Bintang<br />
+              Lampung Selatan, 35365
+            </address>
+          </div>
+          <div class="footer-section">
+            <h3>Lokasi Desa</h3>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.3!2d105.3!3d-5.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjQnMDAuMCJTIDEwNcKwMTgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+                width="100%"
+                height="200"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta lokasi Desa Lematang"
+              >
+              </iframe>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Desa Lematang. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Jam Pelayanan</h3>
+            <p>
+              <strong>Senin - Jumat:</strong><br />
+              08:00 - 16:00 WIB<br />
+              <strong>Sabtu:</strong><br />
+              08:00 - 12:00 WIB<br />
+              <strong>Minggu & Tanggal Merah:</strong> Libur
+            </p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Desa Lematang. Seluruh Hak Cipta Dilindungi | Dibuat
+            untuk Masyarakat Lematang
+          </p>
+        </div>
+      </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
