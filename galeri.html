@@ -7,11 +7,11 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Galeri foto dan dokumentasi kegiatan Desa Lematang."
+      content="Galeri foto kegiatan dan dokumentasi Program KKN UNILA di Desa Lematang."
     />
     <meta
       name="keywords"
-      content="Galeri Desa Lematang, Foto Desa, Dokumentasi Kegiatan, Lampung Selatan"
+      content="Galeri Desa Lematang, Foto Desa, Program KKN, Dokumentasi, Lampung Selatan"
     />
     <meta name="author" content="Pemerintah Desa Lematang" />
 
@@ -21,17 +21,20 @@
     <meta property="og:title" content="Galeri Desa - Desa Lematang" />
     <meta
       property="og:description"
-      content="Dokumentasi foto dan kegiatan di Desa Lematang"
+      content="Dokumentasi foto dan Program KKN UNILA di Desa Lematang"
     />
     <meta property="og:image" content="img/logo.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://desalematang.id/galeri.html" />
+    <meta
+      property="twitter:url"
+      content="https://desalematang.id/galeri.html"
+    />
     <meta property="twitter:title" content="Galeri Desa - Desa Lematang" />
     <meta
       property="twitter:description"
-      content="Dokumentasi foto dan kegiatan di Desa Lematang"
+      content="Dokumentasi foto dan Program KKN UNILA di Desa Lematang"
     />
     <meta property="twitter:image" content="img/logo.png" />
 
@@ -43,185 +46,14 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/galeri.css" />
+    <link rel="stylesheet" href="css/galeri-award.css" />
 
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-
-    <style>
-        /* Override untuk memastikan menu putih */
-        .nav-menu li a {
-            color: #ffffff !important;
-        }
-        
-        .nav-menu li a.active,
-        .nav-menu li a:hover {
-            color: #ffffff !important;
-            background-color: rgba(0, 0, 0, 0.3) !important;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 49, 53, 0.15);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            background: var(--white);
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 40px rgba(0, 49, 53, 0.25);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-caption {
-            padding: 1.5rem;
-        }
-
-        .gallery-caption h3 {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .gallery-caption p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .gallery-category {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            background: var(--gradient-secondary);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-
-        .filter-btn {
-            padding: 0.8rem 1.8rem;
-            background: var(--white);
-            color: var(--primary-color);
-            border: 2px solid var(--border-color);
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--gradient-primary);
-            color: var(--white);
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            color: white;
-            font-size: 3rem;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .lightbox-close:hover {
-            transform: scale(1.2);
-        }
-
-        .upload-section {
-            background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--white) 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 3rem;
-            border: 2px dashed var(--accent-color);
-        }
-
-        .upload-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .upload-section p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 1.5rem;
-            }
-
-            .filter-buttons {
-                gap: 0.5rem;
-            }
-
-            .filter-btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -231,149 +63,322 @@
     <section class="page-header">
       <div class="container">
         <h1>Galeri Desa Lematang</h1>
-        <p>Dokumentasi Kegiatan & Momen Berharga KKN UNILA</p>
+        <p>Dokumentasi Kegiatan & Program KKN UNILA</p>
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Penghargaan Desa Section -->
     <section class="section">
-        <div class="container">
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" onclick="filterGallery('all')">Semua Kegiatan</button>
-                <button class="filter-btn" onclick="filterGallery('kkn')">Program KKN</button>
-                <button class="filter-btn" onclick="filterGallery('pembangunan')">Pembangunan</button>
-                <button class="filter-btn" onclick="filterGallery('sosial')">Kegiatan Sosial</button>
-                <button class="filter-btn" onclick="filterGallery('budaya')">Budaya & Tradisi</button>
+      <div class="container">
+        <h2 class="section-title">Penghargaan Desa</h2>
+        <p class="section-subtitle">
+          Prestasi membanggakan yang diraih Desa Lematang
+        </p>
+
+        <!-- Award Highlight -->
+        <div class="award-highlight">
+          <div
+            class="award-highlight-image"
+            onclick="openLightbox('img/desa1.jpg')"
+          >
+            <img
+              src="img/desa1.jpg"
+              alt="Panen Raya Jagung Terbesar"
+              loading="lazy"
+            />
+            <div class="award-highlight-caption">
+              <div class="award-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h3>Panen Raya Jagung Terbesar di Lampung Selatan</h3>
+              <p>
+                Penghargaan atas keberhasilan pertanian jagung dengan hasil
+                panen terbesar se-Kabupaten Lampung Selatan tahun 2025
+              </p>
             </div>
-
-            <!-- Gallery Grid -->
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Sample Gallery Items -->
-                <div class="gallery-item" data-category="kkn" onclick="openLightbox('img/desa1.jpg')">
-                    <img src="img/desa1.jpg" alt="Kegiatan KKN">
-                    <div class="gallery-caption">
-                        <h3>Sosialisasi Program KKN</h3>
-                        <p>Pertemuan dengan warga untuk membahas program kerja KKN UNILA di Desa Lematang</p>
-                        <span class="gallery-category">Program KKN</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="pembangunan" onclick="openLightbox('img/desa2.jpg')">
-                    <img src="img/desa2.jpg" alt="Pembangunan Desa">
-                    <div class="gallery-caption">
-                        <h3>Pembangunan Infrastruktur</h3>
-                        <p>Gotong royong pembangunan fasilitas umum bersama masyarakat Desa Lematang</p>
-                        <span class="gallery-category">Pembangunan</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="sosial" onclick="openLightbox('img/desa3.jpg')">
-                    <img src="img/desa3.jpg" alt="Kegiatan Sosial">
-                    <div class="gallery-caption">
-                        <h3>Bakti Sosial</h3>
-                        <p>Pembagian sembako dan kegiatan sosial kepada warga yang membutuhkan</p>
-                        <span class="gallery-category">Kegiatan Sosial</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="kkn" onclick="openLightbox('img/desa1.jpg')">
-                    <img src="img/desa1.jpg" alt="Penyuluhan">
-                    <div class="gallery-caption">
-                        <h3>Penyuluhan Kesehatan</h3>
-                        <p>Program penyuluhan kesehatan dan kebersihan lingkungan untuk warga desa</p>
-                        <span class="gallery-category">Program KKN</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="budaya" onclick="openLightbox('img/desa2.jpg')">
-                    <img src="img/desa2.jpg" alt="Budaya">
-                    <div class="gallery-caption">
-                        <h3>Festival Budaya Desa</h3>
-                        <p>Perayaan festival budaya lokal dengan menampilkan kesenian tradisional</p>
-                        <span class="gallery-category">Budaya & Tradisi</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="pembangunan" onclick="openLightbox('img/desa3.jpg')">
-                    <img src="img/desa3.jpg" alt="Digitalisasi">
-                    <div class="gallery-caption">
-                        <h3>Program Digitalisasi</h3>
-                        <p>Pelatihan digital marketing dan teknologi untuk UMKM Desa Lematang</p>
-                        <span class="gallery-category">Pembangunan</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Upload Section -->
-            <div class="upload-section">
-                <h3>📤 Ingin Berkontribusi?</h3>
-                <p>Jika Anda memiliki foto atau dokumentasi kegiatan di Desa Lematang, silakan hubungi tim KKN UNILA atau kantor desa untuk menambahkannya ke galeri ini.</p>
-                <p><strong>Kontak:</strong> Kantor Desa Lematang - Jl. Ir. Sutami Km 11 Lematang</p>
-            </div>
+          </div>
         </div>
+
+        <h2 class="section-title" style="margin-top: 3rem">
+          Galeri Kegiatan Desa
+        </h2>
+        <p class="section-subtitle">
+          Dokumentasi kegiatan sehari-hari dan acara desa
+        </p>
+
+        <!-- Simple Photo Grid -->
+        <div class="photo-grid" id="photoGrid">
+          <!-- Photo Item 1 -->
+          <div class="photo-item" onclick="openLightbox('img/desa1.jpg')">
+            <img src="img/desa1.jpg" alt="Kegiatan Desa" loading="lazy" />
+            <div class="photo-caption">Kegiatan Gotong Royong Desa</div>
+          </div>
+
+          <!-- Photo Item 2 -->
+          <div class="photo-item" onclick="openLightbox('img/desa2.jpg')">
+            <img src="img/desa2.jpg" alt="Kegiatan Desa" loading="lazy" />
+            <div class="photo-caption">Pertemuan Warga</div>
+          </div>
+
+          <!-- Photo Item 3 -->
+          <div class="photo-item" onclick="openLightbox('img/desa3.jpg')">
+            <img src="img/desa3.jpg" alt="Kegiatan Desa" loading="lazy" />
+            <div class="photo-caption">Perayaan 17 Agustus</div>
+          </div>
+
+          <!-- Photo Item 4 -->
+          <div class="photo-item" onclick="openLightbox('img/desa1.jpg')">
+            <img src="img/desa1.jpg" alt="Kegiatan PKK" loading="lazy" />
+            <div class="photo-caption">Kegiatan PKK</div>
+          </div>
+
+          <!-- Photo Item 5 -->
+          <div class="photo-item" onclick="openLightbox('img/desa2.jpg')">
+            <img src="img/desa2.jpg" alt="Posyandu" loading="lazy" />
+            <div class="photo-caption">Posyandu Balita</div>
+          </div>
+
+          <!-- Photo Item 6 -->
+          <div class="photo-item" onclick="openLightbox('img/desa3.jpg')">
+            <img src="img/desa3.jpg" alt="Pembangunan" loading="lazy" />
+            <div class="photo-caption">Pembangunan Infrastruktur</div>
+          </div>
+
+          <!-- Photo Item 7 -->
+          <div class="photo-item" onclick="openLightbox('img/desa1.jpg')">
+            <img src="img/desa1.jpg" alt="Kerja Bakti" loading="lazy" />
+            <div class="photo-caption">Kerja Bakti Mingguan</div>
+          </div>
+
+          <!-- Photo Item 8 -->
+          <div class="photo-item" onclick="openLightbox('img/desa2.jpg')">
+            <img src="img/desa2.jpg" alt="Pengajian" loading="lazy" />
+            <div class="photo-caption">Pengajian Rutin</div>
+          </div>
+
+          <!-- Photo Item 9 -->
+          <div class="photo-item" onclick="openLightbox('img/desa3.jpg')">
+            <img src="img/desa3.jpg" alt="Karang Taruna" loading="lazy" />
+            <div class="photo-caption">Kegiatan Karang Taruna</div>
+          </div>
+
+          <!-- Photo Item 10 -->
+          <div class="photo-item" onclick="openLightbox('img/desa1.jpg')">
+            <img src="img/desa1.jpg" alt="Senam Sehat" loading="lazy" />
+            <div class="photo-caption">Senam Sehat Bersama</div>
+          </div>
+
+          <!-- Photo Item 11 -->
+          <div class="photo-item" onclick="openLightbox('img/desa2.jpg')">
+            <img src="img/desa2.jpg" alt="Festival Desa" loading="lazy" />
+            <div class="photo-caption">Festival Desa Tahunan</div>
+          </div>
+
+          <!-- Photo Item 12 -->
+          <div class="photo-item" onclick="openLightbox('img/desa3.jpg')">
+            <img src="img/desa3.jpg" alt="Pelatihan" loading="lazy" />
+            <div class="photo-caption">Pelatihan Keterampilan</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program KKN Section -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Program Kerja KKN UNILA</h2>
+        <p class="section-subtitle">
+          Dokumentasi lengkap program kerja Kuliah Kerja Nyata UNILA di Desa
+          Lematang
+        </p>
+
+        <!-- Program Cards Grid -->
+        <div class="program-grid">
+          <!-- Program Card 1 -->
+          <a href="proker-detail.html?id=digitalisasi" class="program-card">
+            <img
+              src="img/desa1.jpg"
+              alt="Digitalisasi Desa"
+              class="program-card-image"
+              loading="lazy"
+            />
+            <div class="program-card-content">
+              <div class="program-card-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Digitalisasi Website Desa</h3>
+              <p class="program-card-desc">
+                Pembuatan website profil desa untuk meningkatkan transparansi
+                dan akses informasi bagi masyarakat.
+              </p>
+              <div class="program-card-meta">
+                <span><i class="fas fa-calendar"></i> Jan 2026</span>
+                <span><i class="fas fa-users"></i> Tim IT</span>
+              </div>
+              <span class="program-card-link">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Program Card 2 -->
+          <a
+            href="proker-detail.html?id=penyuluhan-kesehatan"
+            class="program-card"
+          >
+            <img
+              src="img/desa2.jpg"
+              alt="Penyuluhan Kesehatan"
+              class="program-card-image"
+              loading="lazy"
+            />
+            <div class="program-card-content">
+              <div class="program-card-icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h3>Penyuluhan Kesehatan Masyarakat</h3>
+              <p class="program-card-desc">
+                Program edukasi kesehatan dan kebersihan lingkungan untuk
+                meningkatkan kualitas hidup warga desa.
+              </p>
+              <div class="program-card-meta">
+                <span><i class="fas fa-calendar"></i> Jan 2026</span>
+                <span><i class="fas fa-users"></i> Tim Kesehatan</span>
+              </div>
+              <span class="program-card-link">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Program Card 3 -->
+          <a href="proker-detail.html?id=pelatihan-umkm" class="program-card">
+            <img
+              src="img/desa3.jpg"
+              alt="Pelatihan UMKM"
+              class="program-card-image"
+              loading="lazy"
+            />
+            <div class="program-card-content">
+              <div class="program-card-icon">
+                <i class="fas fa-store"></i>
+              </div>
+              <h3>Pelatihan Digital Marketing UMKM</h3>
+              <p class="program-card-desc">
+                Workshop dan pendampingan UMKM dalam pemasaran digital untuk
+                meningkatkan penjualan produk lokal.
+              </p>
+              <div class="program-card-meta">
+                <span><i class="fas fa-calendar"></i> Jan 2026</span>
+                <span><i class="fas fa-users"></i> Tim Ekonomi</span>
+              </div>
+              <span class="program-card-link">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Program Card 4 -->
+          <a href="proker-detail.html?id=literasi-anak" class="program-card">
+            <img
+              src="img/desa1.jpg"
+              alt="Literasi Anak"
+              class="program-card-image"
+              loading="lazy"
+            />
+            <div class="program-card-content">
+              <div class="program-card-icon">
+                <i class="fas fa-book-reader"></i>
+              </div>
+              <h3>Program Literasi Anak Desa</h3>
+              <p class="program-card-desc">
+                Kegiatan baca buku dan dongeng untuk meningkatkan minat baca
+                anak-anak di Desa Lematang.
+              </p>
+              <div class="program-card-meta">
+                <span><i class="fas fa-calendar"></i> Jan 2026</span>
+                <span><i class="fas fa-users"></i> Tim Pendidikan</span>
+              </div>
+              <span class="program-card-link">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Program Card 5 -->
+          <a href="proker-detail.html?id=gotong-royong" class="program-card">
+            <img
+              src="img/desa2.jpg"
+              alt="Gotong Royong"
+              class="program-card-image"
+              loading="lazy"
+            />
+            <div class="program-card-content">
+              <div class="program-card-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3>Gotong Royong Pembersihan Desa</h3>
+              <p class="program-card-desc">
+                Kegiatan bersama membersihkan lingkungan desa untuk menciptakan
+                lingkungan yang bersih dan sehat.
+              </p>
+              <div class="program-card-meta">
+                <span><i class="fas fa-calendar"></i> Jan 2026</span>
+                <span><i class="fas fa-users"></i> Seluruh Tim</span>
+              </div>
+              <span class="program-card-link">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Program Card 6 -->
+          <a href="proker-detail.html?id=festival-budaya" class="program-card">
+            <img
+              src="img/desa3.jpg"
+              alt="Festival Budaya"
+              class="program-card-image"
+              loading="lazy"
+            />
+            <div class="program-card-content">
+              <div class="program-card-icon">
+                <i class="fas fa-theater-masks"></i>
+              </div>
+              <h3>Festival Seni & Budaya Lokal</h3>
+              <p class="program-card-desc">
+                Penyelenggaraan festival untuk melestarikan dan memperkenalkan
+                kesenian tradisional Desa Lematang.
+              </p>
+              <div class="program-card-meta">
+                <span><i class="fas fa-calendar"></i> Jan 2026</span>
+                <span><i class="fas fa-users"></i> Tim Budaya</span>
+              </div>
+              <span class="program-card-link">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img src="" alt="Preview" id="lightboxImg">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="Preview" id="lightboxImg" />
     </div>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="js/includes.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        // Gallery Filter
-        function filterGallery(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // Update active button
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Filter items
-            items.forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
-        }
-
-        // Lightbox Functions
-        function openLightbox(imageSrc) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightboxImg');
-            lightboxImg.src = imageSrc;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-    </script>
-</body>
+    <script src="js/galeri.js"></script>
+  </body>
 </html>
