@@ -1,0 +1,161 @@
+/* ========================================
+   UMKM PRODUCTS GRID STYLES
+   Card style untuk produk UMKM
+   ======================================== */
+
+/* UMKM Products Grid */
+.umkm-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* UMKM Product Card */
+.umkm-product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.umkm-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary);
+}
+
+/* Product Image Container */
+.umkm-product-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.umkm-product-image .image-placeholder {
+  font-size: 80px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.umkm-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Title */
+.umkm-product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Product Description */
+.umkm-product-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+/* Product Price */
+.umkm-product-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  padding-top: 15px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.umkm-product-price .price-unit {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .umkm-products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .umkm-product-card {
+    padding: 20px;
+  }
+
+  .umkm-product-image {
+    height: 180px;
+  }
+
+  .umkm-product-image .image-placeholder {
+    font-size: 70px;
+  }
+
+  .umkm-product-title {
+    font-size: 1.15rem;
+  }
+
+  .umkm-product-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .umkm-products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .umkm-product-card {
+    padding: 18px;
+  }
+
+  .umkm-product-image {
+    height: 160px;
+  }
+
+  .umkm-product-image .image-placeholder {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .umkm-products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .umkm-product-card {
+    padding: 20px;
+  }
+
+  .umkm-product-image {
+    height: 200px;
+  }
+
+  .umkm-product-image .image-placeholder {
+    font-size: 80px;
+  }
+
+  .umkm-product-title {
+    font-size: 1.2rem;
+  }
+}

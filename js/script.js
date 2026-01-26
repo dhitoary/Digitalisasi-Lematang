@@ -412,6 +412,166 @@ const Utils = {
   },
 };
 
+// ===== MODAL SYSTEM =====
+const ModalModule = {
+  // Placeholder image jika gambar belum tersedia
+  placeholderImage:
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad)' width='800' height='600'/%3E%3Ccircle cx='400' cy='250' r='80' fill='white' opacity='0.2'/%3E%3Cpath d='M 350 230 L 370 250 L 450 170' stroke='white' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='0.3'/%3E%3Ctext x='50%25' y='400' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='32' fill='white' font-weight='bold'%3EGambar Belum Tersedia%3C/text%3E%3Ctext x='50%25' y='450' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' fill='white' opacity='0.8'%3ESilakan upload gambar ke folder img/%3C/text%3E%3C/svg%3E",
+
+  // Data UMKM
+  umkmData: {
+    umkm1: {
+      title: "KERIPIK PISANG",
+      description:
+        "KERIPIK PISANG KEPOK ASLI GURIH TANPA BAHAN PENGAWET",
+      image: "img/keripik-pisang.jpg", // Ganti dengan path gambar yang sesuai
+      phone: "6281234567890", // Format: 62 + nomor tanpa 0 di depan
+      location: "https://maps.google.com/?q=-5.4,105.3", // Ganti dengan koordinat yang sesuai
+      message: "Halo, saya tertarik dengan Keripik Pisang. Apakah masih tersedia?",
+    },
+    umkm2: {
+      title: "BERAS LOKAL PREMIUM",
+      description:
+        "BERAS BERKUALITAS TINGGI LANGSUNG DARI PETANI LOKAL LEMATANG",
+      image: "img/beras-lokal.jpg",
+      phone: "6281234567891",
+      location: "https://maps.google.com/?q=-5.41,105.31",
+      message: "Halo, saya ingin memesan Beras Lokal Premium.",
+    },
+    umkm3: {
+      title: "KERAJINAN ANYAMAN BAMBU",
+      description:
+        "BERBAGAI KERAJINAN TANGAN DARI ANYAMAN BAMBU BERKUALITAS TINGGI",
+      image: "img/anyaman-bambu.jpg",
+      phone: "6281234567892",
+      location: "https://maps.google.com/?q=-5.39,105.29",
+      message: "Halo, saya tertarik dengan produk Kerajinan Anyaman Bambu.",
+    },
+  },
+
+  // Data Wisata
+  tourismData: {
+    wisata1: {
+      title: "WISATA PERTANIAN LEMATANG",
+      description:
+        "Nikmati pengalaman berwisata di area pertanian dengan pemandangan sawah yang luas. Cocok untuk edukasi dan rekreasi keluarga.",
+      image: "img/wisata-pertanian.jpg",
+      location: "https://maps.google.com/?q=-5.4,105.3",
+      phone: "6281234567893",
+      message: "Halo, saya ingin informasi tentang Wisata Pertanian Lematang.",
+    },
+    wisata2: {
+      title: "WISATA ALAM SUNGAI LEMATANG",
+      description:
+        "Destinasi wisata alam dengan pemandangan sungai yang indah dan udara segar. Tempat yang sempurna untuk bersantai dan menikmati alam.",
+      image: "img/wisata-alam.jpg",
+      location: "https://maps.google.com/?q=-5.41,105.31",
+      phone: "6281234567894",
+      message: "Halo, saya ingin berkunjung ke Wisata Alam Sungai Lematang.",
+    },
+    wisata3: {
+      title: "WISATA SEJARAH & BUDAYA",
+      description:
+        "Jelajahi sejarah panjang Desa Lematang sejak tahun 1909 dan pelajari budaya lokal yang kaya. Tersedia pemandu wisata.",
+      image: "img/wisata-budaya.jpg",
+      location: "https://maps.google.com/?q=-5.39,105.29",
+      phone: "6281234567895",
+      message: "Halo, saya tertarik dengan Wisata Sejarah & Budaya Lematang.",
+    },
+    wisata4: {
+      title: "WISATA INDUSTRI",
+      description:
+        "Tour edukasi ke kawasan industri untuk mempelajari proses produksi. Cocok untuk kunjungan sekolah dan mahasiswa.",
+      image: "img/wisata-industri.jpg",
+      location: "https://maps.google.com/?q=-5.38,105.32",
+      phone: "6281234567896",
+      message: "Halo, saya ingin mengatur kunjungan Wisata Industri.",
+    },
+  },
+};
+
+// Fungsi membuka modal UMKM
+function openUMKMModal(umkmId) {
+  const data = ModalModule.umkmData[umkmId];
+  if (!data) return;
+
+  const modal = document.getElementById("umkmModal");
+  document.getElementById("umkmModalTitle").textContent = data.title;
+  document.getElementById("umkmModalDescription").textContent =
+    data.description;
+
+  // Set image dengan fallback ke placeholder
+  const imgElement = document.getElementById("umkmModalImage");
+  imgElement.src = data.image;
+  imgElement.alt = data.title;
+  imgElement.onerror = function () {
+    this.src = ModalModule.placeholderImage;
+  };
+
+  // Set button actions
+  const locationBtn = document.getElementById("umkmLocationBtn");
+  const orderBtn = document.getElementById("umkmOrderBtn");
+
+  locationBtn.onclick = (e) => {
+    e.stopPropagation();
+    window.open(data.location, "_blank");
+  };
+
+  orderBtn.onclick = (e) => {
+    e.stopPropagation();
+    const waUrl = `https://wa.me/${data.phone}?text=${encodeURIComponent(data.message)}`;
+    window.open(waUrl, "_blank");
+  };
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+// Fungsi membuka modal Wisata
+function openTourismModal(wisataId) {
+  const data = ModalModule.tourismData[wisataId];
+  if (!data) return;
+
+  const modal = document.getElementById("tourismModal");
+  document.getElementById("tourismModalTitle").textContent = data.title;
+  document.getElementById("tourismModalDescription").textContent =
+    data.description;
+
+  // Set image dengan fallback ke placeholder
+  const imgElement = document.getElementById("tourismModalImage");
+  imgElement.src = data.image;
+  imgElement.alt = data.title;
+  imgElement.onerror = function () {
+    this.src = ModalModule.placeholderImage;
+  };
+
+  // Set button action - hanya tombol lokasi
+  const locationBtn = document.getElementById("tourismLocationBtn");
+
+  locationBtn.onclick = (e) => {
+    e.stopPropagation();
+    window.open(data.location, "_blank");
+  };
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+// Fungsi menutup modal
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+// Event listener untuk menutup modal dengan tombol ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal("umkmModal");
+    closeModal("tourismModal");
+  }
+});
+
 // ===== INITIALIZATION =====
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize all modules

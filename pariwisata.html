@@ -125,7 +125,7 @@
         </div>
 
         <div class="tourism-grid">
-          <div class="tourism-card">
+          <div class="tourism-card" onclick="openTourismModal('wisata1')">
             <div class="tourism-image">
               <div class="image-placeholder">🌾</div>
             </div>
@@ -142,7 +142,7 @@
             </ul>
           </div>
 
-          <div class="tourism-card">
+          <div class="tourism-card" onclick="openTourismModal('wisata2')">
             <div class="tourism-image">
               <div class="image-placeholder">🌳</div>
             </div>
@@ -159,7 +159,7 @@
             </ul>
           </div>
 
-          <div class="tourism-card">
+          <div class="tourism-card" onclick="openTourismModal('wisata3')">
             <div class="tourism-image">
               <div class="image-placeholder">🏛️</div>
             </div>
@@ -175,7 +175,7 @@
             </ul>
           </div>
 
-          <div class="tourism-card">
+          <div class="tourism-card" onclick="openTourismModal('wisata4')">
             <div class="tourism-image">
               <div class="image-placeholder">🏭</div>
             </div>
@@ -302,41 +302,38 @@
           Berikut adalah beberapa UMKM yang dapat Anda hubungi
         </p>
 
-        <div class="featured-umkm">
-          <div class="umkm-item">
-            <div class="umkm-logo">🏪</div>
-            <h3>Nama UMKM 1</h3>
-            <p class="umkm-category">Kategori: Kuliner</p>
-            <p class="umkm-desc">
-              Deskripsi singkat tentang usaha ini dan produk yang ditawarkan.
+        <div class="umkm-products-grid">
+          <div class="umkm-product-card" onclick="openUMKMModal('umkm1')">
+            <div class="umkm-product-image">
+              <div class="image-placeholder">🏪</div>
+            </div>
+            <h3 class="umkm-product-title">Keripik Pisang</h3>
+            <p class="umkm-product-desc">
+              Keripik pisang kepok asli gurih tanpa bahan pengawet
             </p>
-            <p class="umkm-contact">
-              📍 Dusun Lematang Atas | 📞 08xx-xxxx-xxxx
-            </p>
+            <p class="umkm-product-price">Rp 15.000</p>
           </div>
 
-          <div class="umkm-item">
-            <div class="umkm-logo">🍚</div>
-            <h3>Nama UMKM 2</h3>
-            <p class="umkm-category">Kategori: Pertanian</p>
-            <p class="umkm-desc">
-              Deskripsi singkat tentang usaha ini dan produk yang ditawarkan.
+          <div class="umkm-product-card" onclick="openUMKMModal('umkm2')">
+            <div class="umkm-product-image">
+              <div class="image-placeholder">🌾</div>
+            </div>
+            <h3 class="umkm-product-title">Beras Lokal Premium</h3>
+            <p class="umkm-product-desc">
+              Beras berkualitas langsung dari petani lokal Lematang
             </p>
-            <p class="umkm-contact">
-              📍 Dusun Kampung Sawah | 📞 08xx-xxxx-xxxx
-            </p>
+            <p class="umkm-product-price">Rp 12.000 <span class="price-unit">/kg</span></p>
           </div>
 
-          <div class="umkm-item">
-            <div class="umkm-logo">🎨</div>
-            <h3>Nama UMKM 3</h3>
-            <p class="umkm-category">Kategori: Kerajinan</p>
-            <p class="umkm-desc">
-              Deskripsi singkat tentang usaha ini dan produk yang ditawarkan.
+          <div class="umkm-product-card" onclick="openUMKMModal('umkm3')">
+            <div class="umkm-product-image">
+              <div class="image-placeholder">🎨</div>
+            </div>
+            <h3 class="umkm-product-title">Kerajinan Anyaman Bambu</h3>
+            <p class="umkm-product-desc">
+              Berbagai kerajinan tangan dari anyaman bambu berkualitas
             </p>
-            <p class="umkm-contact">
-              📍 Dusun Lematang Asri | 📞 08xx-xxxx-xxxx
-            </p>
+            <p class="umkm-product-price">Mulai Rp 25.000</p>
           </div>
         </div>
 
@@ -461,6 +458,43 @@
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
       <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- UMKM Modal -->
+    <div id="umkmModal" class="modal" onclick="closeModal('umkmModal')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal('umkmModal')">&times;</button>
+        <h2 id="umkmModalTitle">NAMA PRODUK</h2>
+        <div class="modal-image">
+          <img id="umkmModalImage" src="" alt="Produk UMKM" />
+        </div>
+        <p id="umkmModalDescription" class="modal-description">Deskripsi produk</p>
+        <div class="modal-actions">
+          <button class="modal-btn btn-location" id="umkmLocationBtn" onclick="event.stopPropagation()">
+            <i class="fas fa-map-marker-alt"></i> Lokasi
+          </button>
+          <button class="modal-btn btn-order" id="umkmOrderBtn" onclick="event.stopPropagation()">
+            <i class="fab fa-whatsapp"></i> Beli
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tourism Modal -->
+    <div id="tourismModal" class="modal" onclick="closeModal('tourismModal')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal('tourismModal')">&times;</button>
+        <h2 id="tourismModalTitle">WISATA</h2>
+        <div class="modal-image">
+          <img id="tourismModalImage" src="" alt="Wisata" />
+        </div>
+        <p id="tourismModalDescription" class="modal-description">Deskripsi wisata</p>
+        <div class="modal-actions">
+          <button class="modal-btn btn-location-full" id="tourismLocationBtn" onclick="event.stopPropagation()">
+            <i class="fas fa-map-marker-alt"></i> Lihat Lokasi di Google Maps
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
