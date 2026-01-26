@@ -1,0 +1,66 @@
+/* ===== CSS CUSTOM PROPERTIES / VARIABLES ===== */
+:root {
+  /* Primary Colors */
+  --primary-color: #003135;
+  --secondary-color: #024950;
+  --accent-color: #0fa4af;
+  --tertiary-color: #afdde5;
+  --burnt-orange: #964734;
+
+  /* Neutral Colors */
+  --light-cream: #f8f9fa;
+  --lighter-cream: #ffffff;
+  --white: #ffffff;
+
+  /* Text Colors */
+  --text-dark: #003135;
+  --text-light: #024950;
+
+  /* Background Colors */
+  --bg-light: #f1f7f8;
+  --bg-cream: #afdde5;
+
+  /* Border & Shadow */
+  --border-color: #afdde5;
+  --shadow: 0 4px 20px rgba(0, 49, 53, 0.1);
+  --shadow-lg: 0 8px 40px rgba(0, 49, 53, 0.15);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #003135 0%,
+    #024950 50%,
+    #0fa4af 100%
+  );
+  --gradient-secondary: linear-gradient(135deg, #0fa4af 0%, #afdde5 100%);
+  --gradient-accent: linear-gradient(135deg, #964734 0%, #c16b57 100%);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 15px;
+  --radius-full: 50px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-index Layers */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-fixed: 1000;
+  --z-modal: 5000;
+  --z-tooltip: 9000;
+}
