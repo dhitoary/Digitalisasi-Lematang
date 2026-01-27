@@ -421,71 +421,188 @@ const ModalModule = {
   // Data UMKM
   umkmData: {
     umkm1: {
-      title: "KERIPIK PISANG",
+      title: "WARUNG KITA",
       description:
-        "KERIPIK PISANG KEPOK ASLI GURIH TANPA BAHAN PENGAWET",
-      image: "img/keripik-pisang.jpg", // Ganti dengan path gambar yang sesuai
-      phone: "6281234567890", // Format: 62 + nomor tanpa 0 di depan
-      location: "https://maps.google.com/?q=-5.4,105.3", // Ganti dengan koordinat yang sesuai
-      message: "Halo, saya tertarik dengan Keripik Pisang. Apakah masih tersedia?",
+        "Toko sembako lengkap untuk kebutuhan sehari-hari di Dusun Lubuk Bais. Menyediakan berbagai kebutuhan pokok, bahan makanan, dan perlengkapan rumah tangga dengan harga terjangkau. Lokasi strategis di Jl. Abdul Halim.",
+      image: "img/desa1.jpg",
+      phone: "62853795896170",
+      location: "https://maps.app.goo.gl/a9mYsaXgsq3C5m1E9",
+      message: "Halo Kak Novia, saya ingin tanya ketersediaan barang di Warung Kita.",
     },
     umkm2: {
-      title: "BERAS LOKAL PREMIUM",
+      title: "WARUNG TEH ERNA",
       description:
-        "BERAS BERKUALITAS TINGGI LANGSUNG DARI PETANI LOKAL LEMATANG",
-      image: "img/beras-lokal.jpg",
-      phone: "6281234567891",
-      location: "https://maps.google.com/?q=-5.41,105.31",
-      message: "Halo, saya ingin memesan Beras Lokal Premium.",
+        "Toko sembako dengan berbagai kebutuhan pokok di Dusun Lubuk Bais, sebelahan dengan Warung Kita. Melayani pembelian kebutuhan sehari-hari dengan lengkap dan harga bersahabat.",
+      image: "img/desa2.jpg",
+      phone: "62821795565650",
+      location: "https://maps.app.goo.gl/cXMjKQE6WG81tT9y5",
+      message: "Halo Ibu Erna, saya ingin belanja di Warung Teh Erna.",
     },
     umkm3: {
-      title: "KERAJINAN ANYAMAN BAMBU",
+      title: "WARUNG IBU TIKA",
       description:
-        "BERBAGAI KERAJINAN TANGAN DARI ANYAMAN BAMBU BERKUALITAS TINGGI",
-      image: "img/anyaman-bambu.jpg",
-      phone: "6281234567892",
-      location: "https://maps.google.com/?q=-5.39,105.29",
-      message: "Halo, saya tertarik dengan produk Kerajinan Anyaman Bambu.",
+        "Toko sembako dan gorengan segar setiap hari. Berlokasi di sebelah Masjid Al Ikhmah dekat SDN 2 Lematang. Menyediakan sembako lengkap dan aneka gorengan yang enak untuk camilan keluarga.",
+      image: "img/desa3.jpg",
+      phone: "62857886486730",
+      location: "https://maps.app.goo.gl/woqJ5KWFreg9Ny2C9",
+      message: "Halo Ibu Tika, saya mau pesan gorengan dan sembako.",
+    },
+    umkm4: {
+      title: "WARUNG BUDHE",
+      description:
+        "Warung makan keluarga dengan menu lengkap dan harga terjangkau. Berlokasi di depan Warung Ibu Tika dekat SDN 2. Menyediakan berbagai menu masakan rumahan yang enak dan bergizi.",
+      image: "img/desa1.jpg",
+      phone: "62831682563600",
+      location: "https://maps.app.goo.gl/JAEJxfeC9gTuNUes9",
+      message: "Halo Ibu Rusnia, saya ingin pesan makanan di Warung Budhe.",
+    },
+    umkm5: {
+      title: "WARUNG TEH NENA",
+      description:
+        "Warung kebutuhan sehari-hari yang berlokasi dekat SDN 2 Lematang. Lokasi strategis untuk belanja keperluan rumah tangga dengan akses mudah dari area sekolah dan perumahan sekitar.",
+      image: "img/desa2.jpg",
+      phone: "62831664057430",
+      location: "https://maps.google.com/?q=Warung+Teh+Nena+SDN+2+Lematang",
+      message: "Halo Kak Nenawati, saya mau belanja di Warung Teh Nena.",
+    },
+    umkm6: {
+      title: "WARUNG IBU ANA",
+      description:
+        "Warung sembako strategis di depan kebun karet, sebelum SDN 2 Lematang dan gapura desa. Menyediakan kebutuhan pokok lengkap dengan lokasi yang mudah dijangkau dari berbagai arah.",
+      image: "img/desa3.jpg",
+      phone: "6285835022640",
+      location: "https://maps.google.com/?q=Warung+Ibu+Ana+Lematang+Tanjung+Bintang",
+      message: "Halo Ibu Suhana, saya ingin belanja di Warung Ibu Ana.",
+    },
+    umkm7: {
+      title: "IFRA RASA",
+      description:
+        "Produsen lempok durian dan aneka keripik khas Lampung. Produk berkualitas dengan rasa autentik yang cocok untuk oleh-oleh. Informasi kontak dan lokasi akan segera diperbarui.",
+      image: "img/desa1.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo, saya tertarik dengan produk Ifra Rasa.",
+    },
+    umkm8: {
+      title: "BASO AZAM",
+      description:
+        "Bakso enak dengan kuah segar dan isian melimpah. Cocok untuk makan siang atau sore hari bersama keluarga. Informasi lengkap akan segera diperbarui.",
+      image: "img/desa2.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo, saya ingin pesan Baso Azam.",
+    },
+    umkm9: {
+      title: "PEMPEK BU KADUS IIS",
+      description:
+        "Pempek Palembang asli dengan cuko yang mantap. Berbagai varian pempek tersedia: lenjer, kapal selam, adaan, dan kulit. Informasi kontak akan segera diperbarui.",
+      image: "img/desa3.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Bu Kadus Iis, saya ingin pesan pempek.",
+    },
+    umkm10: {
+      title: "KERIPIK PISANG BU RODIAH",
+      description:
+        "Keripik pisang renyah dan gurih tanpa pengawet. Dibuat dari pisang pilihan dengan proses higienis. Cocok untuk camilan dan oleh-oleh. Info lengkap segera hadir.",
+      image: "img/desa1.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Bu Rodiah, saya ingin pesan keripik pisang.",
+    },
+    umkm11: {
+      title: "ANEKA KUE IBU IDA",
+      description:
+        "Berbagai kue tradisional dan kue basah segar setiap hari. Cocok untuk acara arisan, pengajian, atau sekadar camilan keluarga. Informasi kontak akan segera diperbarui.",
+      image: "img/desa2.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Ibu Ida, saya ingin pesan kue.",
+    },
+    umkm12: {
+      title: "SALON IBU LENA",
+      description:
+        "Salon kecantikan dengan berbagai treatment rambut: potong, cat, smoothing, rebonding, dan creambath. Melayani dengan ramah dan profesional. Info lengkap segera hadir.",
+      image: "img/desa3.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Ibu Lena, saya ingin reservasi salon.",
+    },
+    umkm13: {
+      title: "BUKET IBU DWI",
+      description:
+        "Buket bunga dan hadiah untuk berbagai acara: ulang tahun, wisuda, pernikahan, dan lainnya. Desain custom sesuai keinginan. Informasi kontak akan segera diperbarui.",
+      image: "img/desa1.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Ibu Dwi, saya ingin pesan buket.",
+    },
+    umkm14: {
+      title: "KUE BOLU & KUKUR IBU REVI",
+      description:
+        "Kue bolu lembut dan kukur manis untuk oleh-oleh atau acara keluarga. Tersedia berbagai varian rasa. Produk fresh dan higienis. Info lengkap segera hadir.",
+      image: "img/desa2.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Ibu Revi, saya ingin pesan kue bolu dan kukur.",
+    },
+    umkm15: {
+      title: "FRIED CHICKEN IBU TIARA",
+      description:
+        "Ayam goreng crispy dengan bumbu rahasia yang gurih dan renyah. Cocok untuk makan keluarga atau acara. Tersedia paket hemat dan bisa pre-order. Info lengkap segera hadir.",
+      image: "img/desa3.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
+      message: "Halo Ibu Tiara, saya ingin pesan fried chicken.",
+    },
+    umkm16: {
+      title: "TEMPAT PRINT KUE",
+      description:
+        "Jasa print gambar edible untuk kue ulang tahun dan kue tart. Berlokasi di depan Balai Desa Lematang. Hasil print berkualitas dengan tinta food grade yang aman. Informasi kontak akan segera diperbarui.",
+      image: "img/desa1.jpg",
+      phone: "6281234567890",
+      location: "https://maps.google.com/?q=Balai+Desa+Lematang+Tanjung+Bintang",
+      message: "Halo, saya ingin print gambar untuk kue.",
     },
   },
 
   // Data Wisata
   tourismData: {
     wisata1: {
-      title: "WISATA PERTANIAN LEMATANG",
+      title: "DANAU LEMATANG (DANAU BESI)",
       description:
-        "Nikmati pengalaman berwisata di area pertanian dengan pemandangan sawah yang luas. Cocok untuk edukasi dan rekreasi keluarga.",
-      image: "img/wisata-pertanian.jpg",
-      location: "https://maps.google.com/?q=-5.4,105.3",
+        "Danau unik bekas tambang bijih besi yang terletak di Desa Lematang, Tanjung Bintang. Tempat ini sering dikunjungi karena pemandangan warnanya yang khas dan beroperasi 24 jam. Lokasi ini menjadi destinasi favorit untuk berfoto dengan latar pemandangan danau yang unik.",
+      image: "img/desa1.jpg",
+      location: "https://maps.google.com/?q=Danau+Lematang+Tanjung+Bintang",
       phone: "6281234567893",
-      message: "Halo, saya ingin informasi tentang Wisata Pertanian Lematang.",
+      message: "Halo, saya ingin informasi tentang Danau Lematang (Danau Besi).",
     },
     wisata2: {
-      title: "WISATA ALAM SUNGAI LEMATANG",
+      title: "WISATA ALAM GUNUNG BATU",
       description:
-        "Destinasi wisata alam dengan pemandangan sungai yang indah dan udara segar. Tempat yang sempurna untuk bersantai dan menikmati alam.",
-      image: "img/wisata-alam.jpg",
-      location: "https://maps.google.com/?q=-5.41,105.31",
+        "Terletak di Desa Srikaton, Tanjung Bintang (sekitar 45 menit dari Bandar Lampung). Menampilkan bebatuan granit raksasa yang megah dengan pemandangan kebun karet dan sawah yang hijau. Dilengkapi dengan anak tangga menuju puncak dan gazebo untuk beristirahat sambil menikmati pemandangan alam yang indah.",
+      image: "img/desa2.jpg",
+      location: "https://maps.google.com/?q=Wisata+Gunung+Batu+Srikaton+Tanjung+Bintang",
       phone: "6281234567894",
-      message: "Halo, saya ingin berkunjung ke Wisata Alam Sungai Lematang.",
+      message: "Halo, saya ingin berkunjung ke Wisata Alam Gunung Batu.",
     },
     wisata3: {
-      title: "WISATA SEJARAH & BUDAYA",
+      title: "WONGSOTIRTO AGROPARK & WATERPARK",
       description:
-        "Jelajahi sejarah panjang Desa Lematang sejak tahun 1909 dan pelajari budaya lokal yang kaya. Tersedia pemandu wisata.",
-      image: "img/wisata-budaya.jpg",
-      location: "https://maps.google.com/?q=-5.39,105.29",
+        "Terletak di Jati Indah, Tanjung Bintang. Merupakan tempat wisata keluarga dengan fasilitas waterpark (kolam renang) terbesar di area tersebut, agropark edukatif, dan tempat untuk acara atau gathering. Tiket masuk berkisar Rp20.000 (weekday) hingga Rp25.000 (weekend). Cocok untuk liburan keluarga dan acara gathering.",
+      image: "img/desa3.jpg",
+      location: "https://maps.google.com/?q=Wongsotirto+Agropark+Waterpark+Tanjung+Bintang",
       phone: "6281234567895",
-      message: "Halo, saya tertarik dengan Wisata Sejarah & Budaya Lematang.",
+      message: "Halo, saya tertarik mengunjungi Wongsotirto Agropark & Waterpark.",
     },
     wisata4: {
-      title: "WISATA INDUSTRI",
+      title: "KEBON JATI LEMATANG",
       description:
-        "Tour edukasi ke kawasan industri untuk mempelajari proses produksi. Cocok untuk kunjungan sekolah dan mahasiswa.",
-      image: "img/wisata-industri.jpg",
-      location: "https://maps.google.com/?q=-5.38,105.32",
+        "Perkebunan jati yang luas dan asri di Desa Lematang. Tempat ini menawarkan udara sejuk dan pemandangan hijau perkebunan jati yang rindang. Cocok untuk wisata alam, jalan-jalan santai, edukasi kehutanan, dan fotografi. Pengunjung dapat menikmati suasana tenang dan belajar tentang budidaya tanaman jati.",
+      image: "img/desa3.jpg",
+      location: "https://maps.google.com/?q=Kebon+Jati+Lematang+Tanjung+Bintang",
       phone: "6281234567896",
-      message: "Halo, saya ingin mengatur kunjungan Wisata Industri.",
+      message: "Halo, saya ingin berkunjung ke Kebon Jati Lematang.",
     },
   },
 };

@@ -298,3 +298,127 @@
   min-width: auto;
   background-color: var(--bg-light);
 }
+
+/* RT Grid */
+.rt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.rt-card {
+  background: linear-gradient(
+    135deg,
+    var(--white) 0%,
+    var(--light-cream) 100%
+  );
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all var(--transition-normal);
+  border: 2px solid var(--border-color);
+}
+
+.rt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-color);
+}
+
+.rt-card h4 {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rt-count {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Activity Grid for Karang Taruna */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.activity-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid var(--border-color);
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-color);
+  background: linear-gradient(
+    135deg,
+    var(--white) 0%,
+    var(--tertiary-color) 100%
+  );
+}
+
+.activity-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.activity-card h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-card p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Other Organizations Grid */
+.other-orgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.org-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.org-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.org-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.org-card h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.org-card p {
+  color: var(--text-light);
+  margin: 0;
+}

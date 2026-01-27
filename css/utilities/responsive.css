@@ -89,11 +89,19 @@
   .quick-links,
   .tourism-grid,
   .umkm-categories,
-  .awards-grid {
+  .awards-grid,
+  .activity-grid,
+  .other-orgs,
+  .category-grid,
+  .stats-grid {
     grid-template-columns: 1fr;
   }
 
   .demo-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .umkm-products-grid {
     grid-template-columns: 1fr;
   }
 
@@ -122,7 +130,9 @@
 
   /* Official Grid */
   .official-grid,
-  .kadus-grid {
+  .kadus-grid,
+  .rt-grid,
+  .activity-grid {
     grid-template-columns: 1fr;
   }
 
@@ -195,6 +205,14 @@
   .area-grid,
   .rt-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .geography-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-info {
+    grid-template-columns: 1fr;
   }
 
   /* Scroll to Top */

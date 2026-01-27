@@ -2,55 +2,141 @@
 const urlParams = new URLSearchParams(window.location.search);
 const programId = urlParams.get("id");
 
+// Team members data with full information
+const teamMembers = {
+  "Redho": { name: "Muhammad Redho Zickrie", nim: "2314111034", major: "Budidaya Perairan" },
+  "Dhito": { name: "Dhito Aryo Trengginas", nim: "2315061015", major: "Teknik Informatika" },
+  "Joy": { name: "Joyce Caecilia Manullang", nim: "2318011108", major: "Kedokteran" },
+  "Joyce": { name: "Joyce Caecilia Manullang", nim: "2318011108", major: "Kedokteran" },
+  "Lusi": { name: "Lusi Nagita Gultom", nim: "2317011077", major: "Kimia" },
+  "Marsha": { name: "Marsha Adelia M", nim: "2312011376", major: "Ilmu Hukum" },
+  "Reva": { name: "Reva Agustina", nim: "2311031037", major: "Akuntansi" },
+  "Rio": { name: "Okta Rio Romadan", nim: "2312011520", major: "Ilmu Hukum" },
+  "Tata": { name: "Dharma Lina Lestari", nim: "2358011016", major: "Kedokteran" },
+  "Reza": { name: "Muhammad Reza Syah Pahlevi", nim: "2316021023", major: "Ilmu Pemerintahan" },
+  "Adel": { name: "Ukhta Fadela R", nim: "2318011093", major: "Kedokteran" },
+  "Yotri": { name: "Komang Yotri Sagita", nim: "2351012012", major: "Bisnis Digital" },
+  "Dimas": { name: "Dimas Eka Putra Santoso", nim: "2315061114", major: "Teknik Informatika" },
+  "Lala": { name: "Nurmala Iksan Putri", nim: "2316021045", major: "Ilmu Pemerintahan" },
+  "Alkhan": { name: "Muhammad Alkhan", nim: "2356041045", major: "Administrasi Negara" },
+  "Jizdan": { name: "Kms Muhammad Jizdan Hafidzh", nim: "2256051043", major: "Administrasi Bisnis" },
+  "Jidan": { name: "Kms Muhammad Jizdan Hafidzh", nim: "2256051043", major: "Administrasi Bisnis" },
+  "Audy": { name: "Audy Nur Azizah", nim: "2358011028", major: "Kedokteran" }
+};
+
 // Program data (In real implementation, this could be fetched from a database)
 const programData = {
+  budidamber: {
+    title: "Budidaya Ikan dalam Ember (Budikdamber)",
+    date: "25 Januari 2026",
+    team: "Redho, Jizdan, Rio",
+    image: "img/desa1.jpg",
+    description:
+      "Inovasi budidaya ikan lele dengan sistem aquaponik untuk memperkuat ketahanan pangan dan ekonomi warga desa",
+    background: "Program Budikdamber merupakan inovasi budidaya yang menggabungkan pemeliharaan ikan lele dengan penanaman tanaman secara aquaponik. Metode ini menggunakan feses ikan sebagai nutrisi alami untuk tanaman, menciptakan sistem simbiosis mutualisme yang efisien dan ramah lingkungan.",
+    objectives: [
+      "Memperkuat ketahanan pangan masyarakat desa",
+      "Membudidayakan ikan lele dan tanaman secara bersamaan",
+      "Membantu ekonomi warga melalui hasil budidamber",
+      "Memanfaatkan lahan terbatas secara optimal"
+    ],
+    results: "Program berhasil memperkenalkan metode budidaya modern kepada warga. Ikan menunjukkan pertumbuhan normal dan aktif, sementara tanaman tumbuh sehat dan hijau. Sistem ini dapat menjadi solusi ketahanan pangan dan tambahan ekonomi keluarga dengan memanfaatkan ruang terbatas."
+  },
+  "nobar-film": {
+    title: "Nobar Film: Bahaya Judi Online & Human Trafficking",
+    date: "17 Januari 2026",
+    team: "Rio, Marsha, Reza",
+    image: "img/desa2.jpg",
+    description:
+      "Penyuluhan edukatif melalui pemutaran film 'No More Bets' untuk meningkatkan kesadaran pemuda terhadap bahaya judi online dan human trafficking",
+    background: "Kegiatan edukatif berbasis pemutaran film 'No More Bets (2023)' yang bertujuan meningkatkan kesadaran pemuda-pemudi Desa Lematang tentang bahaya judi online, pinjaman ilegal, lowongan kerja luar negeri ilegal, dan human trafficking melalui metode yang menarik dan mudah dipahami.",
+    objectives: [
+      "Meningkatkan pemahaman tentang bahaya judi online",
+      "Membangun kesadaran kritis terhadap modus penipuan",
+      "Mencegah kesalahpahaman melalui diskusi",
+      "Mendorong sikap preventif menghadapi tawaran berisiko"
+    ],
+    results: "Kegiatan diikuti dengan antusias oleh pemuda-pemudi desa. Peserta mampu menjelaskan bahaya yang disampaikan dalam film dan menunjukkan kesadaran untuk lebih waspada terhadap tawaran judi online, pinjaman ilegal, dan lowongan kerja mencurigakan."
+  },
+  "cek-diabetes": {
+    title: "Cek Kesehatan Gratis Lansia - Posyandu Lubuk Bais",
+    date: "16 Januari 2026",
+    team: "Adel, Tata, Joy",
+    image: "img/desa3.jpg",
+    description:
+      "Kegiatan pemeriksaan kesehatan gratis untuk lansia sebagai upaya deteksi dini risiko penyakit pada lansia Desa Lematang",
+    background: "Kegiatan pemeriksaan kesehatan gratis di Posyandu Lubuk Bais sebagai upaya deteksi dini risiko penyakit kronis, khususnya diabetes pada lansia. Melalui pemeriksaan sederhana dan edukasi kesehatan, program ini meningkatkan kesadaran masyarakat terhadap pentingnya pemantauan kesehatan rutin.",
+    objectives: [
+      "Menyediakan fasilitas pemeriksaan kesehatan gratis",
+      "Mengetahui risiko penyakit diabetes melalui pemeriksaan",
+      "Meningkatkan kesadaran pola hidup sehat",
+      "Mencegah komplikasi penyakit melalui edukasi dini"
+    ],
+    results: "Kegiatan berjalan lancar dengan partisipasi aktif lansia Desa Lematang. Pemeriksaan kesehatan berhasil mendeteksi beberapa risiko kesehatan yang memerlukan monitoring lanjutan. Lansia mendapat edukasi tentang pola hidup sehat dan pentingnya kontrol kesehatan rutin untuk mencegah komplikasi penyakit."
+  },
   digitalisasi: {
     title: "Digitalisasi Website Desa",
-    date: "10-25 Januari 2026",
-    team: "Tim IT & Dokumentasi",
+    date: "26 Januari 2026",
+    team: "Dhito, Dimas, Yotri",
     image: "img/desa1.jpg",
     description:
-      "Pembuatan website profil desa modern untuk meningkatkan transparansi pemerintahan dan akses informasi masyarakat",
+      "Pembuatan website profil desa untuk meningkatkan transparansi informasi dan mempromosikan potensi pariwisata serta UMKM Lematang",
+    background: "Program digitalisasi melalui pembuatan platform informasi desa berbasis website yang memuat konten fundamental seperti profil, sejarah, struktur organisasi, hingga potensi lokal (Pariwisata & UMKM). Website ini berfungsi sebagai wajah digital desa yang dapat diakses secara luas.",
+    objectives: [
+      "Meningkatkan transparansi informasi publik desa",
+      "Mempromosikan potensi pariwisata dan UMKM",
+      "Memudahkan akses data sejarah dan struktur desa",
+      "Meningkatkan citra modern Desa Lematang"
+    ],
+    results: "Website profil Desa Lematang berhasil diluncurkan dengan tampilan modern dan responsif. Platform ini menyajikan informasi lengkap tentang profil desa, sejarah, struktur organisasi, galeri kegiatan, potensi pariwisata, dan direktori UMKM. Website meningkatkan transparansi informasi dan aksesibilitas data desa bagi masyarakat luas."
   },
-  "penyuluhan-kesehatan": {
-    title: "Penyuluhan Kesehatan Masyarakat",
-    date: "8-22 Januari 2026",
-    team: "Tim Kesehatan",
+  "umkm-qris": {
+    title: "Digitalisasi Ekosistem UMKM (QRIS & Mapping)",
+    date: "20 Januari 2026",
+    team: "Dimas, Yotri, Reva, Dhito",
     image: "img/desa2.jpg",
     description:
-      "Program edukasi kesehatan lingkungan, pola hidup sehat, dan pencegahan penyakit untuk seluruh warga desa",
+      "Pendampingan UMKM untuk beralih ke transaksi nontunai menggunakan QRIS dan digital mapping lokasi usaha di Google Maps",
+    background: "Program pendampingan UMKM untuk beralih ke transaksi digital menggunakan QR Code (QRIS) serta melakukan pemetaan digital lokasi usaha pada Google Maps untuk meningkatkan aksesibilitas konsumen dan modernisasi sistem pembayaran.",
+    objectives: [
+      "Mempercepat digitalisasi keuangan desa",
+      "Meningkatkan visibilitas lokasi UMKM di pencarian digital",
+      "Membantu pencatatan keuangan yang lebih rapi",
+      "Memudahkan akses wisatawan ke lokasi UMKM"
+    ],
+    results: "Program berhasil membantu 10+ UMKM Desa Lematang mendaftar dan menggunakan QRIS untuk transaksi. Selain itu, 10 lokasi usaha berhasil dipetakan di Google Maps, meningkatkan visibilitas dan aksesibilitas bagi konsumen. Pelaku UMKM mendapat edukasi pengelolaan keuangan digital yang lebih baik."
   },
-  "pelatihan-umkm": {
-    title: "Pelatihan Digital Marketing UMKM",
-    date: "12-26 Januari 2026",
-    team: "Tim Ekonomi Kreatif",
+  "anti-bullying": {
+    title: "Edukasi Anti-Bullying di SDN 2 Lematang",
+    date: "14, 21, 28 Januari 2026",
+    team: "Marsha, Lala, Reva, Alkhan",
     image: "img/desa3.jpg",
     description:
-      "Workshop pemasaran digital dan e-commerce untuk pelaku UMKM desa agar produk lokal lebih dikenal luas",
+      "Sosialisasi interaktif untuk meningkatkan pemahaman siswa SD mengenai bullying dan membangun generasi yang saling menghargai",
+    background: "Kegiatan edukatif untuk meningkatkan pemahaman siswa SDN 2 Lematang mengenai bullying dan dampaknya. Program ini berupa sosialisasi interaktif dilanjutkan dengan pendekatan reflektif melalui metode blank paper, memberikan ruang aman bagi siswa untuk mengekspresikan pengalaman.",
+    objectives: [
+      "Menumbuhkan kesadaran dan sikap saling menghargai",
+      "Memberikan ruang aman untuk ekspresikan perasaan",
+      "Meningkatkan empati dan kepedulian siswa",
+      "Mencegah perilaku bullying di lingkungan sekolah"
+    ],
+    results: "Kegiatan diikuti oleh ratusan siswa SDN 2 Lematang dengan antusias. Melalui sosialisasi interaktif dan metode blank paper, siswa menunjukkan peningkatan pemahaman tentang bullying dan dampaknya. Siswa lebih terbuka untuk berbagi pengalaman dan berkomitmen menciptakan lingkungan sekolah yang saling menghargai."
   },
-  "literasi-anak": {
-    title: "Program Literasi Anak Desa",
-    date: "5-23 Januari 2026",
-    team: "Tim Pendidikan",
+  "sabun-pisang": {
+    title: "Pembuatan Sabun Cuci Piring dari Limbah Kulit Pisang",
+    date: "20 Januari 2026",
+    team: "Lusi, Jidan",
     image: "img/desa1.jpg",
     description:
-      "Gerakan literasi melalui dongeng, perpustakaan keliling, dan kegiatan membaca untuk meningkatkan minat baca anak",
-  },
-  "gotong-royong": {
-    title: "Gotong Royong Pembersihan Desa",
-    date: "6-20 Januari 2026",
-    team: "Seluruh Tim KKN",
-    image: "img/desa2.jpg",
-    description:
-      "Kegiatan bersih desa rutin melibatkan warga untuk menciptakan lingkungan yang bersih, sehat, dan asri",
-  },
-  "festival-budaya": {
-    title: "Festival Seni & Budaya Lokal",
-    date: "27 Januari 2026",
-    team: "Tim Seni & Budaya",
-    image: "img/desa3.jpg",
-    description:
-      "Penyelenggaraan festival untuk melestarikan dan memperkenalkan kesenian tradisional kepada generasi muda",
+      "Pelatihan pembuatan sabun cuci piring ramah lingkungan dari limbah kulit pisang untuk meningkatkan keterampilan masyarakat",
+    background: "Program pelatihan pembuatan sabun cuci piring dari limbah kulit pisang yang bertujuan mengurangi limbah rumah tangga sekaligus menghasilkan produk bermanfaat. Sabun dibuat menggunakan texapon, kulit pisang, jeruk nipis, pewarna makanan, dan garam dengan metode sederhana.",
+    objectives: [
+      "Mengurangi limbah rumah tangga (kulit pisang)",
+      "Meningkatkan keterampilan membuat produk mandiri",
+      "Menghasilkan sabun cuci piring ramah lingkungan",
+      "Meningkatkan kesadaran pengelolaan limbah"
+    ],
+    results: "Pelatihan berjalan lancar dengan partisipasi aktif warga. Peserta berhasil membuat sabun cuci piring dari kulit pisang dengan formula sederhana. Produk yang dihasilkan memiliki aroma segar dan efektif membersihkan. Program ini meningkatkan kesadaran tentang pemanfaatan limbah organik dan keterampilan produksi mandiri."
   },
 };
 
@@ -69,6 +155,64 @@ if (programId && programData[programId]) {
     program.title + " - KKN Desa Lematang";
   document.querySelector('meta[name="description"]').content =
     "Detail program " + program.title + " KKN UNILA di Desa Lematang";
+  
+  // Update content sections
+  updateContentSections(program);
+  
+  // Update team section dynamically
+  updateTeamSection(program.team);
+}
+
+// Function to update content sections
+function updateContentSections(program) {
+  // Update background section
+  const backgroundP = document.getElementById('programBackground');
+  if (backgroundP && program.background) {
+    backgroundP.textContent = program.background;
+  }
+  
+  // Update objectives list
+  const objectivesList = document.querySelector('#programObjectives');
+  if (objectivesList && program.objectives) {
+    objectivesList.innerHTML = '';
+    program.objectives.forEach(objective => {
+      const li = document.createElement('li');
+      li.textContent = objective;
+      objectivesList.appendChild(li);
+    });
+  }
+  
+  // Update results section
+  const resultsP = document.getElementById('programResults');
+  if (resultsP && program.results) {
+    resultsP.textContent = program.results;
+  }
+}
+
+// Function to update team section
+function updateTeamSection(teamString) {
+  const teamGrid = document.querySelector('.team-grid');
+  if (!teamGrid) return;
+  
+  const memberNames = teamString.split(',').map(name => name.trim());
+  teamGrid.innerHTML = '';
+  
+  memberNames.forEach(nickname => {
+    const memberData = teamMembers[nickname];
+    if (memberData) {
+      const teamMemberDiv = document.createElement('div');
+      teamMemberDiv.className = 'team-member';
+      teamMemberDiv.innerHTML = `
+        <div class="team-member-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+        <h4>${memberData.name}</h4>
+        <p class="team-nim">${memberData.nim}</p>
+        <p class="team-major">${memberData.major}</p>
+      `;
+      teamGrid.appendChild(teamMemberDiv);
+    }
+  });
 }
 
 // Lightbox Functions

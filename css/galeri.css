@@ -119,6 +119,7 @@
 
 .program-card-meta {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.85rem;
   color: var(--text-light);
@@ -129,6 +130,7 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  flex: 0 1 auto;
 }
 
 .program-card-link {
