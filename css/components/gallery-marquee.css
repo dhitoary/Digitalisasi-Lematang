@@ -1,0 +1,183 @@
+/* ===== GALLERY MARQUEE SECTION ===== */
+
+.gallery-marquee-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-marquee-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.gallery-marquee-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 20px;
+}
+
+.gallery-marquee-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.gallery-marquee-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.gallery-marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.gallery-marquee-track {
+  display: flex;
+  gap: 2rem;
+  animation: marqueeScroll 80s linear infinite;
+  will-change: transform;
+}
+
+.gallery-marquee-wrapper:hover .gallery-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-card {
+  flex-shrink: 0;
+  width: 280px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 49, 53, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 25px rgba(0, 49, 53, 0.2);
+}
+
+.gallery-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-card-image {
+  transform: scale(1.1);
+}
+
+.gallery-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 1.5rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card-overlay {
+  background: linear-gradient(to top, rgba(0, 49, 53, 0.95), rgba(0, 49, 53, 0.3));
+}
+
+.gallery-card-title {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-card-desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+.gallery-card-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card-icon {
+  gap: 0.8rem;
+}
+
+.gallery-view-all {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.gallery-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 20px rgba(15, 164, 175, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(15, 164, 175, 0.4);
+  gap: 1.2rem;
+}
+
+.gallery-btn i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .gallery-marquee-header h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-card {
+    width: 240px;
+    height: 180px;
+  }
+
+  .gallery-marquee-track {
+    gap: 1.5rem;
+    animation: marqueeScroll 30s linear infinite;
+  }
+
+  .gallery-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

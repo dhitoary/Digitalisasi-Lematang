@@ -1,35 +1,27 @@
 /* ===== NAVIGATION COMPONENT ===== */
 
 .navbar {
-  background: rgba(0, 49, 53, 0.1);
-  box-shadow: none;
+  background: rgba(0, 49, 53, 0.95);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: var(--z-sticky);
-  backdrop-filter: blur(5px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar.scrolled {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 49, 53, 0.95) 0%,
-    rgba(2, 73, 80, 0.95) 50%,
-    rgba(15, 164, 175, 0.9) 100%
-  );
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 49, 53, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 20px;
+  padding: 1rem 20px;
   min-height: 70px;
 }
 
@@ -41,24 +33,22 @@
 }
 
 .nav-brand .logo-spin {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
 
 .nav-brand .logo-spin:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .nav-brand h2 {
   color: var(--white);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
-  letter-spacing: 0.5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.3px;
 }
 
 /* Nav Menu */
@@ -71,77 +61,24 @@
 }
 
 .nav-menu li a {
-  color: var(--white) !important;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   font-size: 0.95rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius-md);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
   display: inline-block;
   white-space: nowrap;
 }
 
-.nav-menu li a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(15, 164, 175, 0.8) 0%,
-    rgba(255, 255, 255, 0.9) 50%,
-    rgba(15, 164, 175, 0.8) 100%
-  );
-  transform: translateX(-50%);
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 8px rgba(15, 164, 175, 0.6);
-}
-
-.nav-menu li a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.15) 0%,
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: var(--radius-md);
-}
-
-.nav-menu li a:hover::before,
-.nav-menu li a.active::before {
-  width: 85%;
-}
-
-.nav-menu li a:hover::after {
-  opacity: 1;
-}
-
-.nav-menu li a:hover,
-.nav-menu li a.active {
-  color: var(--white) !important;
-  background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
-  box-shadow:
-    0 4px 12px rgba(15, 164, 175, 0.25),
-    0 2px 4px rgba(0, 0, 0, 0.1);
-  text-shadow:
-    0 0 10px rgba(15, 164, 175, 0.5),
-    1px 1px 2px rgba(0, 0, 0, 0.3);
+.nav-menu li a:hover {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-menu li a.active {
-  background-color: rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 4px 15px rgba(15, 164, 175, 0.35),
-    inset 0 1px 3px rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  background-color: rgba(15, 164, 175, 0.2);
 }
 
 /* Hamburger Menu */
@@ -150,8 +87,8 @@
   flex-direction: column;
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: var(--radius-md);
-  transition: all var(--transition-normal);
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
 .hamburger:hover {
@@ -159,11 +96,10 @@
 }
 
 .hamburger span {
-  width: 28px;
-  height: 3px;
+  width: 25px;
+  height: 2px;
   background-color: var(--white);
   margin: 3px 0;
-  transition: all var(--transition-bounce);
+  transition: all 0.3s ease;
   border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
