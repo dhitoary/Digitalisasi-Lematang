@@ -125,7 +125,7 @@ const programData = {
   "sabun-pisang": {
     title: "Pembuatan Sabun Cuci Piring dari Limbah Kulit Pisang",
     date: "20 Januari 2026",
-    team: "Lusi, Jidan",
+    team: "Lusi, Jidan, Lala",
     image: "img/desa1.jpg",
     description:
       "Pelatihan pembuatan sabun cuci piring ramah lingkungan dari limbah kulit pisang untuk meningkatkan keterampilan masyarakat",
@@ -189,6 +189,33 @@ function updateContentSections(program) {
   }
 }
 
+// Function to shorten long names
+function shortenName(fullName) {
+  // Split name into parts
+  const parts = fullName.split(' ');
+  
+  // If name has 2 words or less, return as is
+  if (parts.length <= 2) {
+    return fullName;
+  }
+  
+  // Process each part
+  const shortened = parts.map((part, index) => {
+    // If it's "Muhammad", shorten to "M."
+    if (part.toLowerCase() === 'muhammad') {
+      return 'M.';
+    }
+    // If it's the last part, shorten to initial with dot
+    if (index === parts.length - 1) {
+      return part.charAt(0).toUpperCase() + '.';
+    }
+    // Keep all other parts full (first, middle, etc)
+    return part;
+  });
+  
+  return shortened.join(' ');
+}
+
 // Function to update team section
 function updateTeamSection(teamString) {
   const teamGrid = document.querySelector('.team-grid');
@@ -202,11 +229,13 @@ function updateTeamSection(teamString) {
     if (memberData) {
       const teamMemberDiv = document.createElement('div');
       teamMemberDiv.className = 'team-member';
+      const displayName = shortenName(memberData.name);
       teamMemberDiv.innerHTML = `
         <div class="team-member-avatar">
+          <img src="img/team/${nickname.toLowerCase()}.jpg" alt="${displayName}" onerror="this.style.display='none'" />
           <i class="fas fa-user"></i>
         </div>
-        <h4>${memberData.name}</h4>
+        <h4>${displayName}</h4>
         <p class="team-nim">${memberData.nim}</p>
         <p class="team-major">${memberData.major}</p>
       `;
