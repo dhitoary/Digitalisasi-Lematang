@@ -6,7 +6,6 @@ const programId = urlParams.get("id");
 const teamMembers = {
   "Redho": { name: "Muhammad Redho Zickrie", nim: "2314111034", major: "Budidaya Perairan" },
   "Dhito": { name: "Dhito Aryo Trengginas", nim: "2315061015", major: "Teknik Informatika" },
-  "Joy": { name: "Joyce Caecilia Manullang", nim: "2318011108", major: "Kedokteran" },
   "Joyce": { name: "Joyce Caecilia Manullang", nim: "2318011108", major: "Kedokteran" },
   "Lusi": { name: "Lusi Nagita Gultom", nim: "2317011077", major: "Kimia" },
   "Marsha": { name: "Marsha Adelia M", nim: "2312011376", major: "Ilmu Hukum" },
@@ -20,8 +19,6 @@ const teamMembers = {
   "Lala": { name: "Nurmala Iksan Putri", nim: "2316021045", major: "Ilmu Pemerintahan" },
   "Alkhan": { name: "Muhammad Alkhan", nim: "2356041045", major: "Administrasi Negara" },
   "Jizdan": { name: "Kms Muhammad Jizdan Hafidzh", nim: "2256051043", major: "Administrasi Bisnis" },
-  "Jidan": { name: "Kms Muhammad Jizdan Hafidzh", nim: "2256051043", major: "Administrasi Bisnis" },
-  "Audy": { name: "Audy Nur Azizah", nim: "2358011028", major: "Kedokteran" }
 };
 
 // Program data (In real implementation, this could be fetched from a database)
@@ -30,7 +27,7 @@ const programData = {
     title: "Budidaya Ikan dalam Ember (Budikdamber)",
     date: "25 Januari 2026",
     team: "Redho, Jizdan, Rio",
-    image: "img/desa1.jpg",
+    image: "img/proker/budidamber/hero.jpg",
     description:
       "Inovasi budidaya ikan lele dengan sistem aquaponik untuk memperkuat ketahanan pangan dan ekonomi warga desa",
     background: "Program Budikdamber merupakan inovasi budidaya yang menggabungkan pemeliharaan ikan lele dengan penanaman tanaman secara aquaponik. Metode ini menggunakan feses ikan sebagai nutrisi alami untuk tanaman, menciptakan sistem simbiosis mutualisme yang efisien dan ramah lingkungan.",
@@ -46,7 +43,7 @@ const programData = {
     title: "Nobar Film: Bahaya Judi Online & Human Trafficking",
     date: "17 Januari 2026",
     team: "Rio, Marsha, Reza",
-    image: "img/desa2.jpg",
+    image: "img/proker/nobar-film/hero.jpg",
     description:
       "Penyuluhan edukatif melalui pemutaran film 'No More Bets' untuk meningkatkan kesadaran pemuda terhadap bahaya judi online dan human trafficking",
     background: "Kegiatan edukatif berbasis pemutaran film 'No More Bets (2023)' yang bertujuan meningkatkan kesadaran pemuda-pemudi Desa Lematang tentang bahaya judi online, pinjaman ilegal, lowongan kerja luar negeri ilegal, dan human trafficking melalui metode yang menarik dan mudah dipahami.",
@@ -61,8 +58,8 @@ const programData = {
   "cek-diabetes": {
     title: "Cek Kesehatan Gratis Lansia - Posyandu Lubuk Bais",
     date: "16 Januari 2026",
-    team: "Adel, Tata, Joy",
-    image: "img/desa3.jpg",
+    team: "Adel, Tata, Joyce",
+    image: "img/proker/cek-diabetes/hero.jpg",
     description:
       "Kegiatan pemeriksaan kesehatan gratis untuk lansia sebagai upaya deteksi dini risiko penyakit pada lansia Desa Lematang",
     background: "Kegiatan pemeriksaan kesehatan gratis di Posyandu Lubuk Bais sebagai upaya deteksi dini risiko penyakit kronis, khususnya diabetes pada lansia. Melalui pemeriksaan sederhana dan edukasi kesehatan, program ini meningkatkan kesadaran masyarakat terhadap pentingnya pemantauan kesehatan rutin.",
@@ -75,26 +72,27 @@ const programData = {
     results: "Kegiatan berjalan lancar dengan partisipasi aktif lansia Desa Lematang. Pemeriksaan kesehatan berhasil mendeteksi beberapa risiko kesehatan yang memerlukan monitoring lanjutan. Lansia mendapat edukasi tentang pola hidup sehat dan pentingnya kontrol kesehatan rutin untuk mencegah komplikasi penyakit."
   },
   digitalisasi: {
-    title: "Digitalisasi Website Desa",
-    date: "26 Januari 2026",
+    title: "Digitalisasi Website Desa Lematang",
+    date: "15 - 26 Januari 2026",
     team: "Dhito, Dimas, Yotri",
-    image: "img/desa1.jpg",
+    image: "img/proker/digitalisasi/hero.jpg",
     description:
-      "Pembuatan website profil desa untuk meningkatkan transparansi informasi dan mempromosikan potensi pariwisata serta UMKM Lematang",
-    background: "Program digitalisasi melalui pembuatan platform informasi desa berbasis website yang memuat konten fundamental seperti profil, sejarah, struktur organisasi, hingga potensi lokal (Pariwisata & UMKM). Website ini berfungsi sebagai wajah digital desa yang dapat diakses secara luas.",
+      "Pengembangan website profil desa untuk meningkatkan transparansi informasi publik dan mempromosikan potensi pariwisata serta UMKM Desa Lematang",
+    background: "Program digitalisasi melalui pembuatan website profil desa berbasis teknologi modern yang memuat informasi lengkap tentang profil, sejarah, struktur organisasi, galeri kegiatan, potensi pariwisata, dan direktori UMKM. Website dirancang responsif dan mudah diakses untuk menjadi wajah digital resmi Desa Lematang.",
     objectives: [
       "Meningkatkan transparansi informasi publik desa",
-      "Mempromosikan potensi pariwisata dan UMKM",
-      "Memudahkan akses data sejarah dan struktur desa",
-      "Meningkatkan citra modern Desa Lematang"
+      "Mempromosikan potensi pariwisata dan UMKM lokal",
+      "Menyediakan akses mudah ke data profil dan struktur desa",
+      "Mendokumentasikan program kerja dan kegiatan desa",
+      "Meningkatkan citra modern Desa Lematang di era digital"
     ],
-    results: "Website profil Desa Lematang berhasil diluncurkan dengan tampilan modern dan responsif. Platform ini menyajikan informasi lengkap tentang profil desa, sejarah, struktur organisasi, galeri kegiatan, potensi pariwisata, dan direktori UMKM. Website meningkatkan transparansi informasi dan aksesibilitas data desa bagi masyarakat luas."
+    results: "Website Desa Lematang berhasil diluncurkan dengan 8 halaman utama meliputi beranda, profil desa, pemerintahan, lembaga, pariwisata & UMKM, dan galeri. Website dibangun dengan desain modern dan responsif, mudah diakses dari berbagai perangkat. Platform ini berhasil meningkatkan transparansi informasi desa dan menjadi rujukan digital untuk promosi potensi lokal Desa Lematang."
   },
   "umkm-qris": {
     title: "Digitalisasi Ekosistem UMKM (QRIS & Mapping)",
     date: "20 Januari 2026",
     team: "Dimas, Yotri, Reva, Dhito",
-    image: "img/desa2.jpg",
+    image: "img/proker/umkm-qris/hero.jpg",
     description:
       "Pendampingan UMKM untuk beralih ke transaksi nontunai menggunakan QRIS dan digital mapping lokasi usaha di Google Maps",
     background: "Program pendampingan UMKM untuk beralih ke transaksi digital menggunakan QR Code (QRIS) serta melakukan pemetaan digital lokasi usaha pada Google Maps untuk meningkatkan aksesibilitas konsumen dan modernisasi sistem pembayaran.",
@@ -110,7 +108,7 @@ const programData = {
     title: "Edukasi Anti-Bullying di SDN 2 Lematang",
     date: "14, 21, 28 Januari 2026",
     team: "Marsha, Lala, Reva, Alkhan",
-    image: "img/desa3.jpg",
+    image: "img/proker/anti-bullying/hero.jpg",
     description:
       "Sosialisasi interaktif untuk meningkatkan pemahaman siswa SD mengenai bullying dan membangun generasi yang saling menghargai",
     background: "Kegiatan edukatif untuk meningkatkan pemahaman siswa SDN 2 Lematang mengenai bullying dan dampaknya. Program ini berupa sosialisasi interaktif dilanjutkan dengan pendekatan reflektif melalui metode blank paper, memberikan ruang aman bagi siswa untuk mengekspresikan pengalaman.",
@@ -125,8 +123,8 @@ const programData = {
   "sabun-pisang": {
     title: "Pembuatan Sabun Cuci Piring dari Limbah Kulit Pisang",
     date: "20 Januari 2026",
-    team: "Lusi, Jidan, Lala",
-    image: "img/desa1.jpg",
+    team: "Lusi, Jizdan, Lala",
+    image: "img/proker/sabun-pisang/hero.jpg",
     description:
       "Pelatihan pembuatan sabun cuci piring ramah lingkungan dari limbah kulit pisang untuk meningkatkan keterampilan masyarakat",
     background: "Program pelatihan pembuatan sabun cuci piring dari limbah kulit pisang yang bertujuan mengurangi limbah rumah tangga sekaligus menghasilkan produk bermanfaat. Sabun dibuat menggunakan texapon, kulit pisang, jeruk nipis, pewarna makanan, dan garam dengan metode sederhana.",
@@ -159,6 +157,9 @@ if (programId && programData[programId]) {
   // Update content sections
   updateContentSections(program);
   
+  // Update gallery section dynamically
+  updateGallerySection(programId);
+  
   // Update team section dynamically
   updateTeamSection(program.team);
 }
@@ -186,6 +187,30 @@ function updateContentSections(program) {
   const resultsP = document.getElementById('programResults');
   if (resultsP && program.results) {
     resultsP.textContent = program.results;
+  }
+}
+
+// Function to update gallery section dynamically
+function updateGallerySection(programId) {
+  const galleryContainer = document.querySelector('.article-gallery');
+  if (!galleryContainer) return;
+  
+  // Clear existing gallery
+  galleryContainer.innerHTML = '';
+  
+  // Create gallery images (assuming 6 images per program: 1.jpg to 6.jpg)
+  const imageCount = 6;
+  for (let i = 1; i <= imageCount; i++) {
+    const imgPath = `img/proker/${programId}/${i}.jpg`;
+    const img = document.createElement('img');
+    img.src = imgPath;
+    img.alt = `Dokumentasi ${i}`;
+    img.onclick = function() { openLightbox(imgPath); };
+    
+    // Hide image if it doesn't exist (404 error)
+    img.onerror = function() { this.style.display = 'none'; };
+    
+    galleryContainer.appendChild(img);
   }
 }
 
