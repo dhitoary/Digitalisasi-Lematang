@@ -102,7 +102,7 @@ const programData = {
       "Membantu pencatatan keuangan yang lebih rapi",
       "Memudahkan akses wisatawan ke lokasi UMKM"
     ],
-    results: "Program berhasil membantu 10+ UMKM Desa Lematang mendaftar dan menggunakan QRIS untuk transaksi. Selain itu, 10 lokasi usaha berhasil dipetakan di Google Maps, meningkatkan visibilitas dan aksesibilitas bagi konsumen. Pelaku UMKM mendapat edukasi pengelolaan keuangan digital yang lebih baik."
+    results: "UMKM Desa Lematang berhasil didampingi untuk mulai menggunakan QRIS dalam transaksi sehari-hari, memudahkan pembeli yang tidak membawa uang tunai. Lokasi usaha juga sudah terdaftar di Google Maps, jadi lebih gampang ditemukan pembeli atau wisatawan yang lewat. Pemilik usaha juga dapat pencerahan tentang cara kelola uang digital yang lebih teratur."
   },
   "anti-bullying": {
     title: "Edukasi Anti-Bullying di SDN 2 Lematang",
@@ -257,8 +257,8 @@ function updateTeamSection(teamString) {
       const displayName = shortenName(memberData.name);
       teamMemberDiv.innerHTML = `
         <div class="team-member-avatar">
-          <img src="img/team/${nickname.toLowerCase()}.jpg" alt="${displayName}" onerror="this.style.display='none'" />
-          <i class="fas fa-user"></i>
+          <img src="img/team/${nickname.toLowerCase()}.png" alt="${displayName}" onerror="this.parentElement.querySelector('.fas').style.display='block'" />
+          <i class="fas fa-user" style="display: none;"></i>
         </div>
         <h4>${displayName}</h4>
         <p class="team-nim">${memberData.nim}</p>
