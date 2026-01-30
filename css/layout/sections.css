@@ -135,7 +135,7 @@
   overflow: hidden;
 }
 
-.highlight::before {
+/* .highlight::before {
   content: "";
   position: absolute;
   left: 0;
@@ -154,7 +154,7 @@
 .highlight:hover {
   transform: translateX(10px);
   box-shadow: 0 6px 25px rgba(15, 164, 175, 0.25);
-}
+} */
 
 /* Geography Grid */
 .geography-grid {
@@ -308,11 +308,7 @@
 }
 
 .rt-card {
-  background: linear-gradient(
-    135deg,
-    var(--white) 0%,
-    var(--light-cream) 100%
-  );
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-cream) 100%);
   padding: 1.5rem;
   border-radius: var(--radius-lg);
   text-align: center;
