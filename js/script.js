@@ -427,7 +427,8 @@ const ModalModule = {
       image: "img/desa1.jpg",
       phone: "62853795896170",
       location: "https://maps.app.goo.gl/a9mYsaXgsq3C5m1E9",
-      message: "Halo Kak Novia, saya ingin tanya ketersediaan barang di Warung Kita.",
+      message:
+        "Halo Kak Novia, saya ingin tanya ketersediaan barang di Warung Kita.",
     },
     umkm2: {
       title: "WARUNG TEH ERNA",
@@ -471,7 +472,8 @@ const ModalModule = {
         "Warung sembako strategis di depan kebun karet, sebelum SDN 2 Lematang dan gapura desa. Menyediakan kebutuhan pokok lengkap dengan lokasi yang mudah dijangkau dari berbagai arah.",
       image: "img/desa3.jpg",
       phone: "6285835022640",
-      location: "https://maps.google.com/?q=Warung+Ibu+Ana+Lematang+Tanjung+Bintang",
+      location:
+        "https://maps.google.com/?q=Warung+Ibu+Ana+Lematang+Tanjung+Bintang",
       message: "Halo Ibu Suhana, saya ingin belanja di Warung Ibu Ana.",
     },
     umkm7: {
@@ -561,7 +563,8 @@ const ModalModule = {
         "Jasa print gambar edible untuk kue ulang tahun dan kue tart. Berlokasi di depan Balai Desa Lematang. Hasil print berkualitas dengan tinta food grade yang aman. Informasi kontak akan segera diperbarui.",
       image: "img/desa1.jpg",
       phone: "6281234567890",
-      location: "https://maps.google.com/?q=Balai+Desa+Lematang+Tanjung+Bintang",
+      location:
+        "https://maps.google.com/?q=Balai+Desa+Lematang+Tanjung+Bintang",
       message: "Halo, saya ingin print gambar untuk kue.",
     },
   },
@@ -571,36 +574,24 @@ const ModalModule = {
     wisata1: {
       title: "DANAU LEMATANG (DANAU BESI)",
       description:
-        "Danau unik bekas tambang bijih besi yang terletak di Desa Lematang, Tanjung Bintang. Tempat ini sering dikunjungi karena pemandangan warnanya yang khas dan beroperasi 24 jam. Lokasi ini menjadi destinasi favorit untuk berfoto dengan latar pemandangan danau yang unik.",
-      image: "img/desa1.jpg",
-      location: "https://maps.google.com/?q=Danau+Lematang+Tanjung+Bintang",
+        "Danau unik bekas tambang bijih besi yang terletak di Desa Lematang, Tanjung Bintang, Lampung Selatan. Tempat ini terkenal karena pemandangan warna air yang khas dan eksotis, hasil dari kandungan mineral bekas tambang. Beroperasi 24 jam, danau ini menjadi destinasi favorit untuk fotografi dengan latar pemandangan yang unik dan memukau. Cocok untuk wisata singkat, berfoto, dan menikmati keindahan alam yang berbeda dari biasanya.",
+      image: "img/pariwisata/danau-lematang.jpg",
+      mapEmbed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.042114692138!2d105.34588097394082!3d-5.410557054039935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dd004d8473bd%3A0x599932fa9a085789!2sDanau%20pt!5e0!3m2!1sid!2sid!4v1769784761819!5m2!1sid!2sid",
+      location: "https://maps.app.goo.gl/mdQZZcUR3ugu2x898",
       phone: "6281234567893",
-      message: "Halo, saya ingin informasi tentang Danau Lematang (Danau Besi).",
+      message:
+        "Halo, saya ingin informasi tentang Danau Lematang (Danau Besi).",
     },
+
     wisata2: {
-      title: "WISATA ALAM GUNUNG BATU",
-      description:
-        "Terletak di Desa Srikaton, Tanjung Bintang (sekitar 45 menit dari Bandar Lampung). Menampilkan bebatuan granit raksasa yang megah dengan pemandangan kebun karet dan sawah yang hijau. Dilengkapi dengan anak tangga menuju puncak dan gazebo untuk beristirahat sambil menikmati pemandangan alam yang indah.",
-      image: "img/desa2.jpg",
-      location: "https://maps.google.com/?q=Wisata+Gunung+Batu+Srikaton+Tanjung+Bintang",
-      phone: "6281234567894",
-      message: "Halo, saya ingin berkunjung ke Wisata Alam Gunung Batu.",
-    },
-    wisata3: {
-      title: "WONGSOTIRTO AGROPARK & WATERPARK",
-      description:
-        "Terletak di Jati Indah, Tanjung Bintang. Merupakan tempat wisata keluarga dengan fasilitas waterpark (kolam renang) terbesar di area tersebut, agropark edukatif, dan tempat untuk acara atau gathering. Tiket masuk berkisar Rp20.000 (weekday) hingga Rp25.000 (weekend). Cocok untuk liburan keluarga dan acara gathering.",
-      image: "img/desa3.jpg",
-      location: "https://maps.google.com/?q=Wongsotirto+Agropark+Waterpark+Tanjung+Bintang",
-      phone: "6281234567895",
-      message: "Halo, saya tertarik mengunjungi Wongsotirto Agropark & Waterpark.",
-    },
-    wisata4: {
       title: "KEBON JATI LEMATANG",
       description:
-        "Perkebunan jati yang luas dan asri di Desa Lematang. Tempat ini menawarkan udara sejuk dan pemandangan hijau perkebunan jati yang rindang. Cocok untuk wisata alam, jalan-jalan santai, edukasi kehutanan, dan fotografi. Pengunjung dapat menikmati suasana tenang dan belajar tentang budidaya tanaman jati.",
-      image: "img/desa3.jpg",
-      location: "https://maps.google.com/?q=Kebon+Jati+Lematang+Tanjung+Bintang",
+        "Perkebunan jati yang luas dan asri di Desa Lematang, Tanjung Bintang, Lampung Selatan. Tempat ini menawarkan udara sejuk dan segar di tengah rimbunnya pepohonan jati yang hijau dan menenangkan. Cocok untuk berbagai aktivitas seperti wisata alam, jalan-jalan santai, healing, edukasi kehutanan, dan fotografi dengan latar alam yang asri. Pengunjung dapat menikmati suasana tenang, relaksasi dari hiruk pikuk kota, dan belajar tentang budidaya serta manfaat tanaman jati.",
+      image: "img/pariwisata/kebon-jati.jpg",
+      mapEmbed:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0636343281485!2d105.35478527394079!3d-5.40727865401426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dd3e6e4f0f95%3A0x8f86e4486876b1c6!2sKebon%20Jati%20Lematang!5e0!3m2!1sid!2sid!4v1769784673208!5m2!1sid!2sid",
+      location: "https://maps.app.goo.gl/CrVmd8uqEgTgqk1e7",
       phone: "6281234567896",
       message: "Halo, saya ingin berkunjung ke Kebon Jati Lematang.",
     },
@@ -662,7 +653,13 @@ function openTourismModal(wisataId) {
     this.src = ModalModule.placeholderImage;
   };
 
-  // Set button action - hanya tombol lokasi
+  // Set iframe maps
+  const mapElement = document.getElementById("tourismModalMap");
+  if (data.mapEmbed) {
+    mapElement.src = data.mapEmbed;
+  }
+
+  // Set button action - buka di Google Maps
   const locationBtn = document.getElementById("tourismLocationBtn");
 
   locationBtn.onclick = (e) => {

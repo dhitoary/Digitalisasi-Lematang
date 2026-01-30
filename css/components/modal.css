@@ -128,7 +128,11 @@
 
 /* Info Button */
 .btn-info {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
   color: white;
   box-shadow: 0 4px 15px rgba(15, 164, 175, 0.3);
 }
@@ -141,16 +145,18 @@
 /* Full Width Location Button */
 .btn-location-full {
   width: 100%;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #0fa4af 0%, #003135 100%);
   color: white !important;
   box-shadow: 0 4px 15px rgba(15, 164, 175, 0.3);
   display: flex !important;
   visibility: visible !important;
+  border: none;
 }
 
 .btn-location-full:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(15, 164, 175, 0.4);
+  box-shadow: 0 6px 20px rgba(15, 164, 175, 0.5);
+  background: linear-gradient(135deg, #0fa4af 0%, #024950 100%);
 }
 
 /* Close Button */

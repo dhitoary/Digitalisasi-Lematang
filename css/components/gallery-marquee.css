@@ -100,7 +100,11 @@
 }
 
 .gallery-card:hover .gallery-card-overlay {
-  background: linear-gradient(to top, rgba(0, 49, 53, 0.95), rgba(0, 49, 53, 0.3));
+  background: linear-gradient(
+    to top,
+    rgba(0, 49, 53, 0.95),
+    rgba(0, 49, 53, 0.3)
+  );
 }
 
 .gallery-card-title {
