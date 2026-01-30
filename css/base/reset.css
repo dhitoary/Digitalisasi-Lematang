@@ -11,6 +11,7 @@ body {
   color: var(--text-dark);
   background-color: var(--white);
   overflow-x: hidden;
+  padding-top: 70px;
 }
 
 img {

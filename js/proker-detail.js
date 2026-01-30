@@ -170,21 +170,20 @@ const programData = {
   },
   "sabun-pisang": {
     title: "Pembuatan Sabun Cuci Piring dari Limbah Kulit Pisang",
-    date: "20 Januari 2026",
+    date: "24 Januari 2026",
     team: "Lusi, Jizdan, Lala",
     image: "img/proker/sabun-pisang/hero.jpg",
     description:
       "Pelatihan pembuatan sabun cuci piring ramah lingkungan dari limbah kulit pisang untuk meningkatkan keterampilan masyarakat",
     background:
-      "Program pelatihan pembuatan sabun cuci piring dari limbah kulit pisang yang bertujuan mengurangi limbah rumah tangga sekaligus menghasilkan produk bermanfaat. Sabun dibuat menggunakan texapon, kulit pisang, jeruk nipis, pewarna makanan, dan garam dengan metode sederhana.",
+      "Meningkatnya kebutuhan masyarakat terhadap sabun cuci piring sebagai produk kebersihan sehari-hari, pembuatan sabun cuci piring secara mandiri dari limbah kulit pisang menjadi alternatif yang bermanfaat untuk memenuhi kebutuhan rumah tangga. Penggunaan kulit pisang sebagai bahan tambahan alami dalam pembuatan sabun cuci piring didasarkan pada kandungan senyawa aktif seperti flavonoid, tanin, dan senyawa fenolik yang memiliki sifat antibakteri.",
     objectives: [
-      "Mengurangi limbah rumah tangga (kulit pisang)",
-      "Meningkatkan keterampilan membuat produk mandiri",
-      "Menghasilkan sabun cuci piring ramah lingkungan",
-      "Meningkatkan kesadaran pengelolaan limbah",
+      "Melatih masyarakat dalam proses pembuatan sabun cuci piring secara mandiri dengan metode yang mudah diterapkan",
+      "Membuka peluang usaha (sabun cuci piring komersial) yang dapat meningkatkan perekonomian masyarakat",
+      "Memberikan edukasi kepada masyarakat mengenai pemanfaatan limbah kulit pisang sebagai antibakteri alami dan mendorong pengurangan limbah organik rumah tangga",
     ],
     results:
-      "Pelatihan berjalan lancar dengan partisipasi aktif warga. Peserta berhasil membuat sabun cuci piring dari kulit pisang dengan formula sederhana. Produk yang dihasilkan memiliki aroma segar dan efektif membersihkan. Program ini meningkatkan kesadaran tentang pemanfaatan limbah organik dan keterampilan produksi mandiri.",
+      "Program berhasil menghasilkan produk sabun cuci piring sebanyak 30-35 botol ukuran 100 mL dengan kualitas yang baik. Masyarakat memperoleh pengetahuan serta kemampuan praktis dalam mengolah limbah kulit pisang dan membuat sabun cuci piring secara mandiri. Pemanfaatan limbah kulit pisang menjadi produk bernilai guna sehingga turut mengurangi volume limbah organik rumah tangga sekaligus membuka peluang usaha yang dapat meningkatkan perekonomian keluarga.",
   },
 };
 

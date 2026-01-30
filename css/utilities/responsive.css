@@ -3,9 +3,15 @@
 /* Tablet Styles - Max Width 768px */
 @media (max-width: 768px) {
   /* Navigation */
+  .navbar {
+    z-index: 9999;
+  }
+
   .navbar .container {
     flex-wrap: wrap;
     padding: 0.8rem 15px;
+    position: relative;
+    z-index: 10000;
   }
 
   .nav-brand .logo-spin {
@@ -26,6 +32,8 @@
     padding: 1rem 0;
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 9999;
   }
 
   .nav-menu li {
@@ -46,6 +54,7 @@
 
   .hamburger {
     display: flex;
+    z-index: 10001;
   }
 
   /* Hero */
@@ -144,84 +153,528 @@
 /* Mobile Styles - Max Width 480px */
 @media (max-width: 480px) {
   /* Base */
+  body {
+    padding-top: 50px;
+  }
+
   .container {
-    padding: 0 15px;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  /* Navigation */
+  .navbar {
+    z-index: 9999;
+  }
+
+  .navbar .container {
+    padding: 0.5rem 10px;
+    position: relative;
+    z-index: 10000;
+  }
+
+  .nav-brand {
+    z-index: 10001;
+  }
+
+  .nav-brand .logo-spin {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-brand h2 {
+    font-size: 0.9rem;
+  }
+
+  .nav-menu {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .nav-menu li a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .hamburger {
+    z-index: 10001;
   }
 
   /* Hero */
   .hero-slider {
-    max-height: 500px;
-    min-height: 400px;
+    max-height: 320px;
+    min-height: 280px;
+  }
+
+  .hero-content {
+    padding: 1rem;
   }
 
   .hero-content h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
   }
 
   .hero-content p {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
   }
 
   .hero-btn {
-    padding: 12px 28px;
-    font-size: 0.85rem;
+    padding: 6px 16px;
+    font-size: 0.7rem;
   }
 
   .slider-nav {
-    padding: 8px 12px;
-    font-size: 1.3rem;
+    padding: 5px 8px;
+    font-size: 1rem;
   }
 
   .slider-nav.prev {
-    left: 8px;
+    left: 5px;
   }
 
   .slider-nav.next {
-    right: 8px;
+    right: 5px;
   }
 
   .slide-indicators {
-    bottom: 15px;
-    gap: 8px;
+    bottom: 8px;
+    gap: 5px;
   }
 
   .indicator {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Page Header */
+  .page-header {
+    padding: 40px 10px;
+  }
+
+  .page-header h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .page-header p {
+    font-size: 0.75rem;
   }
 
   /* Sections */
   .section {
-    padding: 40px 15px;
+    padding: 25px 10px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 1.2rem;
   }
 
   .content-box {
-    padding: 1.5rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-box h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .content-box h3 {
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .content-box p,
+  .content-box li {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+
+  .content-box ul {
+    margin-left: 1.2rem;
+  }
+
+  /* Cards */
+  .info-cards,
+  .quick-links,
+  .tourism-grid,
+  .umkm-categories,
+  .awards-grid,
+  .activity-grid,
+  .other-orgs,
+  .category-grid,
+  .stats-grid,
+  .official-grid,
+  .kadus-grid,
+  .company-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .info-card,
+  .quick-link-card,
+  .tourism-card,
+  .category-card,
+  .activity-card,
+  .org-card {
+    padding: 1.2rem;
+  }
+
+  .info-card .icon,
+  .quick-link-card .icon,
+  .category-card .icon {
+    font-size: 2rem;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-card h3,
+  .quick-link-card h3,
+  .tourism-card h3,
+  .category-card h3,
+  .org-card h3 {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .info-card p,
+  .quick-link-card p,
+  .tourism-card p,
+  .category-card p,
+  .org-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Gallery & Program Cards */
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .photo-item {
+    aspect-ratio: 16/9;
+  }
+
+  .photo-caption {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .program-card-image {
+    height: 140px;
+  }
+
+  .program-card-content {
+    padding: 1rem;
+  }
+
+  .program-card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .program-card h3 {
+    font-size: 0.9rem;
+    margin: 0.6rem 0 0.4rem;
+  }
+
+  .program-card-desc {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .program-card-meta {
+    font-size: 0.65rem;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .program-card-link {
+    font-size: 0.7rem;
+  }
+
+  /* Buttons */
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  /* Official Cards */
+  .official-card,
+  .kadus-card,
+  .rt-card {
+    padding: 0.8rem;
+  }
+
+  .official-img,
+  .kadus-img,
+  .rt-img {
+    width: 60px;
+    height: 75px;
+    margin-bottom: 0.6rem;
+  }
+
+  .official-info h3,
+  .kadus-info h3,
+  .rt-info h3 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .official-info p,
+  .kadus-info p,
+  .rt-info p {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* UMKM Cards */
+  .umkm-card {
+    padding: 1.2rem;
+  }
+
+  .umkm-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .umkm-card p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .umkm-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.8rem;
+  }
+
+  .umkm-products-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .umkm-product-card {
+    padding: 1rem;
+  }
+
+  .umkm-product-img {
+    height: 160px;
+    margin-bottom: 0.8rem;
+  }
+
+  .umkm-product-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .umkm-product-card p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* Article/Proker Detail */
+  .article-hero {
+    height: 250px;
+  }
+
+  .article-hero-overlay {
+    padding: 1rem;
+  }
+
+  .article-hero h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .article-meta {
+    gap: 1rem;
+    font-size: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .article-container {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .article-content {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .article-content h2 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    padding-left: 0.6rem;
+  }
+
+  .article-content h3 {
+    font-size: 0.95rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .article-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .team-member-avatar {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-member h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .team-member p {
+    font-size: 0.65rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 25px 10px 12px;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer p,
+  .footer li,
+  .footer a {
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  .footer-copyright {
+    font-size: 0.7rem;
+    padding-top: 12px;
+    margin-top: 15px;
   }
 
   /* Grids */
   .area-grid,
   .rt-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 
   .geography-grid {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .market-info {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  /* Timeline */
+  .timeline-content h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.7rem;
+  }
+
+  .timeline-year {
+    font-size: 0.75rem;
+    width: 50px;
+  }
+
+  /* Tables */
+  table {
+    font-size: 0.7rem;
+  }
+
+  th, td {
+    padding: 0.5rem 0.4rem;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb-nav {
+    font-size: 0.7rem;
+  }
+
+  /* Share Buttons */
+  .share-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .share-buttons {
+    gap: 0.6rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .share-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  .share-btn i {
+    font-size: 1rem;
   }
 
   /* Scroll to Top */
   .scroll-to-top {
-    width: 45px;
-    height: 45px;
-    font-size: 1.5rem;
-    bottom: 20px;
-    right: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+    bottom: 12px;
+    right: 12px;
   }
 }
 
