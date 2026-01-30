@@ -155,7 +155,7 @@ const programData = {
     title: "Edukasi Anti-Bullying di SDN 2 Lematang",
     date: "30 Januari 2026",
     team: "Marsha, Lala, Reva, Alkhan",
-    image: "img/proker/anti-bullying/hero.jpg",
+    image: "img/proker/edukasi-anti-bullying/hero.jpg",
     description:
       "Sosialisasi interaktif untuk meningkatkan pemahaman siswa SD mengenai bullying dan membangun generasi yang saling menghargai",
     background:
