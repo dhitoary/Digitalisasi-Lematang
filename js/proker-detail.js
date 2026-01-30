@@ -67,15 +67,14 @@ const programData = {
     description:
       "Inovasi budidaya ikan lele dengan sistem aquaponik untuk memperkuat ketahanan pangan dan ekonomi warga desa",
     background:
-      "Program Budikdamber merupakan inovasi budidaya yang menggabungkan pemeliharaan ikan lele dengan penanaman tanaman secara aquaponik. Metode ini menggunakan feses ikan sebagai nutrisi alami untuk tanaman, menciptakan sistem simbiosis mutualisme yang efisien dan ramah lingkungan.",
+      "Budikdamber (Budidaya Ikan Dalam Ember) adalah metode budidaya ikan yang dilakukan dalam wadah ember dengan memanfaatkan sistem sederhana dan hemat lahan, biasanya dikombinasikan dengan penanaman sayuran di bagian atasnya (akuaponik mini). Tanaman pada budikdamber berfungsi sebagai penyerap nutrien dari sisa pakan dan kotoran ikan, sehingga membantu menjaga kualitas air. Tanaman yang umum digunakan antara lain kangkung dan pacoy karena mudah tumbuh, cepat panen, dan akarnya mampu hidup di air.",
     objectives: [
-      "Memperkuat ketahanan pangan masyarakat desa",
-      "Membudidayakan ikan lele dan tanaman secara bersamaan",
-      "Membantu ekonomi warga melalui hasil budidamber",
-      "Memanfaatkan lahan terbatas secara optimal",
+      "Memanfaatkan limbah ikan sebagai nutrisi tanaman",
+      "Menghasilkan ikan dan sayuran secara bersamaan",
+      "Menghemat air, lahan, dan biaya produksi",
     ],
     results:
-      "Program berhasil memperkenalkan metode budidaya modern kepada warga. Ikan menunjukkan pertumbuhan normal dan aktif, sementara tanaman tumbuh sehat dan hijau. Sistem ini dapat menjadi solusi ketahanan pangan dan tambahan ekonomi keluarga dengan memanfaatkan ruang terbatas.",
+      "Sistem aquaponik ini berhasil menghasilkan ikan konsumsi (lele) dan tanaman sayur (kangkung dan pacoy) secara bersamaan dengan kualitas air yang lebih stabil karena terjaga siklus nutrisinya. Pertumbuhan ikan dan tanaman berlangsung lebih cepat dan sehat dibanding metode konvensional. Manfaatnya sangat terasa karena hemat air yang digunakan berulang, ramah lingkungan tanpa limbah dan pupuk kimia, serta efisien lahan sehingga cocok untuk pekarangan sempit. Biaya operasional juga lebih rendah dalam jangka panjang sambil menghasilkan pangan sehat yang bernilai ekonomi, sekaligus bisa jadi media edukasi dan peluang wirausaha bagi warga.",
   },
   "nobar-film": {
     title: "Nobar Film: Bahaya Judi Online & Human Trafficking",
@@ -85,15 +84,16 @@ const programData = {
     description:
       "Penyuluhan edukatif melalui pemutaran film 'No More Bets' untuk meningkatkan kesadaran pemuda terhadap bahaya judi online dan human trafficking",
     background:
-      "Kegiatan edukatif berbasis pemutaran film 'No More Bets (2023)' yang bertujuan meningkatkan kesadaran pemuda-pemudi Desa Lematang tentang bahaya judi online, pinjaman ilegal, lowongan kerja luar negeri ilegal, dan human trafficking melalui metode yang menarik dan mudah dipahami.",
+      "Perkembangan teknologi dan internet membuat masyarakat desa semakin mudah mengakses informasi, namun di sisi lain juga meningkatkan risiko terpapar judi online, pinjaman online ilegal, dan praktik human trafficking. Kurangnya pemahaman mengenai bahaya, modus, dan dampak dari masalah tersebut menyebabkan masyarakat, khususnya pemuda dan warga produktif, rentan menjadi korban. Oleh karena itu, diperlukan sosialisasi yang menarik dan mudah dipahami. Metode menonton bersama film No More Bets (2023) dipilih karena mampu menggambarkan dampak nyata dari judi online dan perdagangan manusia secara visual dan emosional, sehingga pesan lebih mudah diterima oleh masyarakat.",
     objectives: [
-      "Meningkatkan pemahaman tentang bahaya judi online",
-      "Membangun kesadaran kritis terhadap modus penipuan",
-      "Mencegah kesalahpahaman melalui diskusi",
-      "Mendorong sikap preventif menghadapi tawaran berisiko",
+      "Meningkatkan pemahaman masyarakat Desa Lematang tentang bahaya judi online, pinjol ilegal, dan human trafficking",
+      "Memberikan edukasi mengenai modus dan ciri-ciri kejahatan tersebut agar masyarakat tidak mudah tertipu",
+      "Menumbuhkan sikap waspada dan bijak dalam menggunakan internet dan media digital",
+      "Mendorong masyarakat untuk berani menolak dan melaporkan aktivitas yang mencurigakan",
+      "Mengajak masyarakat, khususnya pemuda, untuk berperan aktif dalam pencegahan kejahatan digital dan sosial di lingkungan Desa Lematang",
     ],
     results:
-      "Kegiatan diikuti dengan antusias oleh pemuda-pemudi desa. Peserta mampu menjelaskan bahaya yang disampaikan dalam film dan menunjukkan kesadaran untuk lebih waspada terhadap tawaran judi online, pinjaman ilegal, dan lowongan kerja mencurigakan.",
+      "Hasil dari kegiatan ini adalah meningkatnya pengetahuan masyarakat tentang ciri-ciri, modus, dan dampak negatif judi online, pinjol ilegal, dan human trafficking. Masyarakat menjadi lebih waspada dan memiliki kesadaran untuk saling mengingatkan serta melaporkan jika menemukan indikasi aktivitas mencurigakan. Manfaat jangka panjangnya adalah terciptanya lingkungan desa yang lebih aman, masyarakat yang lebih bijak dalam penggunaan teknologi, serta berkurangnya potensi korban kejahatan digital khususnya masyarakat Desa Lematang.",
   },
   "cek-diabetes": {
     title: "Cek Kesehatan Gratis Lansia - Posyandu Lubuk Bais",
@@ -103,19 +103,20 @@ const programData = {
     description:
       "Kegiatan pemeriksaan kesehatan gratis untuk lansia sebagai upaya deteksi dini risiko penyakit pada lansia Desa Lematang",
     background:
-      "Kegiatan pemeriksaan kesehatan gratis di Posyandu Lubuk Bais sebagai upaya deteksi dini risiko penyakit kronis, khususnya diabetes pada lansia. Melalui pemeriksaan sederhana dan edukasi kesehatan, program ini meningkatkan kesadaran masyarakat terhadap pentingnya pemantauan kesehatan rutin.",
+      "Berdasarkan data kesehatan Desa Lematang, masih ditemukan cukup banyak warga yang menderita penyakit tidak menular, khususnya diabetes melitus, terutama pada kelompok usia dewasa dan lanjut usia, sehingga diperlukan upaya deteksi dini dan pemantauan kesehatan secara rutin untuk mencegah komplikasi.",
     objectives: [
-      "Menyediakan fasilitas pemeriksaan kesehatan gratis",
-      "Mengetahui risiko penyakit diabetes melalui pemeriksaan",
-      "Meningkatkan kesadaran pola hidup sehat",
-      "Mencegah komplikasi penyakit melalui edukasi dini",
+      "Menyediakan fasilitas pemeriksaan kesehatan gratis sebagai upaya deteksi dini risiko penyakit diabetes",
+      "Mengetahui risiko penyakit diabetes melalui pemeriksaan sederhana",
+      "Meningkatkan kesadaran masyarakat akan pentingnya pemeriksaan kesehatan rutin dan pola hidup sehat",
+      "Mencegah terjadinya komplikasi penyakit melalui edukasi kesehatan sejak dini",
+      "Mendukung upaya promotif dan preventif dalam pelayanan kesehatan masyarakat desa",
     ],
     results:
-      "Kegiatan berjalan lancar dengan partisipasi aktif lansia Desa Lematang. Pemeriksaan kesehatan berhasil mendeteksi beberapa risiko kesehatan yang memerlukan monitoring lanjutan. Lansia mendapat edukasi tentang pola hidup sehat dan pentingnya kontrol kesehatan rutin untuk mencegah komplikasi penyakit.",
+      "Meningkatnya kesadaran lansia Desa Lematang akan pentingnya pemeriksaan kesehatan serta terlaksananya pemeriksaan tekanan darah, gula darah dan penyuluhan kesehatan untuk mencegah komplikasi penyakit.",
   },
   digitalisasi: {
     title: "Digitalisasi Website Desa Lematang",
-    date: "15 - 26 Januari 2026",
+    date: "20 - 30 Januari 2026",
     team: "Dhito, Dimas, Yotri",
     image: "img/proker/digitalisasi/hero.jpg",
     description:
@@ -152,21 +153,20 @@ const programData = {
   },
   "anti-bullying": {
     title: "Edukasi Anti-Bullying di SDN 2 Lematang",
-    date: "14, 21, 28 Januari 2026",
+    date: "30 Januari 2026",
     team: "Marsha, Lala, Reva, Alkhan",
     image: "img/proker/anti-bullying/hero.jpg",
     description:
       "Sosialisasi interaktif untuk meningkatkan pemahaman siswa SD mengenai bullying dan membangun generasi yang saling menghargai",
     background:
-      "Kegiatan edukatif untuk meningkatkan pemahaman siswa SDN 2 Lematang mengenai bullying dan dampaknya. Program ini berupa sosialisasi interaktif dilanjutkan dengan pendekatan reflektif melalui metode blank paper, memberikan ruang aman bagi siswa untuk mengekspresikan pengalaman.",
+      "Bullying masih menjadi permasalahan yang sering terjadi di lingkungan sekolah dasar dan dapat berdampak negatif terhadap perkembangan emosional dan sosial anak. Kurangnya pemahaman mengenai bentuk serta dampak bullying membuat perilaku ini kerap dianggap sebagai hal biasa. Oleh karena itu, diperlukan kegiatan edukatif yang mampu menumbuhkan kesadaran, empati, serta sikap saling menghargai sejak dini pada siswa sekolah dasar.",
     objectives: [
-      "Menumbuhkan kesadaran dan sikap saling menghargai",
-      "Memberikan ruang aman untuk ekspresikan perasaan",
-      "Meningkatkan empati dan kepedulian siswa",
-      "Mencegah perilaku bullying di lingkungan sekolah",
+      "Menumbuhkan kesadaran siswa akan pentingnya sikap saling menghargai sebagai upaya pencegahan bullying",
+      "Menyediakan ruang aman bagi siswa untuk mengekspresikan pengalaman dan perasaan mereka secara tertulis",
+      "Meningkatkan empati dan kepedulian terhadap sesama teman di lingkungan sekolah",
     ],
     results:
-      "Kegiatan diikuti oleh ratusan siswa SDN 2 Lematang dengan antusias. Melalui sosialisasi interaktif dan metode blank paper, siswa menunjukkan peningkatan pemahaman tentang bullying dan dampaknya. Siswa lebih terbuka untuk berbagi pengalaman dan berkomitmen menciptakan lingkungan sekolah yang saling menghargai.",
+      "Berdasarkan hasil pre-test dan post-test terhadap 28 siswa kelas VI, terjadi peningkatan pemahaman mengenai bullying dengan rata-rata nilai naik dari 4,04 menjadi 4,61. Sebanyak 57% siswa mengalami peningkatan nilai, yang menunjukkan bahwa kegiatan ini efektif meningkatkan pemahaman siswa tentang bullying serta menumbuhkan sikap empati dan kepedulian dalam menciptakan lingkungan sekolah yang aman dan ramah.",
   },
   "sabun-pisang": {
     title: "Pembuatan Sabun Cuci Piring dari Limbah Kulit Pisang",
