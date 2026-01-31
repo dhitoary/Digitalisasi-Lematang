@@ -155,7 +155,7 @@ const programData = {
     title: "Edukasi Anti-Bullying di SDN 2 Lematang",
     date: "30 Januari 2026",
     team: "Marsha, Lala, Reva, Alkhan",
-    image: "img/proker/edukasi-anti-bullying/hero.jpg",
+    image: "img/proker/anti-bullying/hero.jpg",
     description:
       "Sosialisasi interaktif untuk meningkatkan pemahaman siswa SD mengenai bullying dan membangun generasi yang saling menghargai",
     background:
@@ -184,6 +184,44 @@ const programData = {
     ],
     results:
       "Program berhasil menghasilkan produk sabun cuci piring sebanyak 30-35 botol ukuran 100 mL dengan kualitas yang baik. Masyarakat memperoleh pengetahuan serta kemampuan praktis dalam mengolah limbah kulit pisang dan membuat sabun cuci piring secara mandiri. Pemanfaatan limbah kulit pisang menjadi produk bernilai guna sehingga turut mengurangi volume limbah organik rumah tangga sekaligus membuka peluang usaha yang dapat meningkatkan perekonomian keluarga.",
+  },
+  "kunjungan-paud": {
+    title: "Kunjungan ke Paud Melati",
+    date: "26 Januari 2026",
+    team: "Redho, Dhito, Joyce, Lusi, Marsha, Reva, Rio, Tata, Reza, Adel, Yotri, Dimas, Lala, Alkhan, Jizdan",
+    image: "img/proker/kunjungan-paud/hero.jpg",
+    description:
+      "Kegiatan edukasi dan interaksi bersama anak-anak PAUD untuk mendukung pembelajaran usia dini melalui permainan edukatif dan storytelling",
+    background:
+      "Pendidikan Anak Usia Dini (PAUD) merupakan fondasi penting dalam pembentukan karakter dan perkembangan kognitif anak. PAUD Melati di Desa Lematang menjadi salah satu lembaga pendidikan awal yang berperan dalam membentuk generasi masa depan. Namun, keterbatasan sumber daya dan variasi kegiatan pembelajaran membuat anak-anak memerlukan stimulus tambahan yang menyenangkan dan edukatif. Oleh karena itu, mahasiswa KKN UNILA mengadakan kunjungan ke PAUD Melati untuk memberikan kegiatan pembelajaran yang interaktif, kreatif, dan menyenangkan.",
+    objectives: [
+      "Memberikan variasi kegiatan pembelajaran yang menarik dan menyenangkan bagi anak-anak PAUD",
+      "Meningkatkan kreativitas dan imajinasi anak melalui permainan edukatif dan storytelling",
+      "Membangun interaksi sosial yang positif antara mahasiswa KKN dengan anak-anak PAUD",
+      "Mendukung perkembangan motorik halus dan kasar anak melalui aktivitas bermain",
+      "Menumbuhkan rasa percaya diri dan keberanian anak untuk berekspresi",
+    ],
+    results:
+      "Kegiatan kunjungan ke PAUD Melati berjalan dengan sangat meriah dan penuh antusiasme dari anak-anak. Mereka sangat aktif mengikuti berbagai permainan edukatif seperti mewarnai, menyanyi, menari, dan mendengarkan cerita dongeng. Anak-anak terlihat gembira dan lebih berani untuk mengekspresikan diri mereka. Guru-guru PAUD juga mengapresiasi kegiatan ini karena memberikan warna baru dalam proses pembelajaran. Manfaat jangka panjang dari kegiatan ini adalah terciptanya lingkungan belajar yang lebih menyenangkan, meningkatnya motivasi anak untuk belajar, serta terbentuknya karakter anak yang lebih percaya diri dan kreatif.",
+  },
+  "kunjungan-industri": {
+    title: "Kunjungan Industri ke PT. HAKAAston",
+    date: "22 Januari 2026",
+    team: "Redho, Dhito, Joyce, Lusi, Marsha, Reva, Rio, Tata, Reza, Adel, Yotri, Dimas, Lala, Alkhan, Jizdan",
+    image: "img/proker/kunjungan-industri/hero.jpg",
+    description:
+      "Kunjungan edukatif mahasiswa KKN UNILA ke PT. HAKAAston untuk mendapatkan wawasan langsung tentang proses produksi industri modern dan praktik manajemen perusahaan",
+    background:
+      "PT. HAKAAston merupakan salah satu perusahaan industri yang beroperasi di wilayah Lampung Selatan dan memiliki peran penting dalam perekonomian daerah. Sebagai mahasiswa KKN UNILA yang sedang bertugas di Desa Lematang, penting bagi kami untuk memahami dinamika industri lokal agar dapat berkontribusi lebih baik dalam program pemberdayaan masyarakat. Melalui kunjungan industri ini, mahasiswa KKN berkesempatan untuk melihat langsung bagaimana sebuah industri modern beroperasi, memahami sistem manajemen produksi, serta mempelajari praktik-praktik terbaik yang dapat diimplementasikan dalam program-program KKN di desa.",
+    objectives: [
+      "Memberikan wawasan kepada mahasiswa KKN UNILA tentang proses produksi dan operasional industri modern",
+      "Memahami standar kerja, sistem manajemen mutu, dan keselamatan kerja (K3) yang diterapkan di industri",
+      "Mempelajari praktik-praktik terbaik yang dapat diimplementasikan dalam program KKN di Desa Lematang",
+      "Membangun jaringan dan kerjasama antara mahasiswa KKN dengan pihak industri untuk pengembangan program desa",
+      "Meningkatkan kompetensi mahasiswa dalam memahami dinamika dunia industri sebagai bekal pengembangan program pemberdayaan masyarakat",
+    ],
+    results:
+      "Kunjungan industri ke PT. HAKAAston memberikan pengalaman berharga bagi seluruh mahasiswa KKN UNILA. Kami mendapatkan penjelasan lengkap mengenai alur produksi, standar keselamatan kerja (K3), serta sistem manajemen mutu yang diterapkan di perusahaan. Mahasiswa berkesempatan melihat langsung proses produksi di lapangan dan berdiskusi dengan para karyawan dan manajer perusahaan. Kegiatan ini membuka wawasan kami tentang bagaimana industri modern beroperasi dan memberikan inspirasi untuk mengimplementasikan praktik-praktik terbaik dalam program-program KKN di Desa Lematang. Pengalaman ini juga memperkaya pemahaman kami tentang pentingnya kerjasama antara akademisi, industri, dan masyarakat dalam pembangunan desa.",
   },
 };
 

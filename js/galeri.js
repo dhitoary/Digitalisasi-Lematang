@@ -19,3 +19,26 @@ document.addEventListener("keydown", function (e) {
     closeLightbox();
   }
 });
+
+// Toggle Show More Photos
+function toggleShowMore() {
+  const hiddenPhotos = document.querySelectorAll('.hidden-photo');
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  
+  const isShowing = hiddenPhotos[0].classList.contains('show');
+  
+  hiddenPhotos.forEach(photo => {
+    photo.classList.toggle('show');
+  });
+  
+  if (isShowing) {
+    showMoreBtn.innerHTML = '<i class="fas fa-images"></i> Lihat Selengkapnya';
+    // Scroll to the photo grid smoothly
+    document.getElementById('photoGrid').scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start' 
+    });
+  } else {
+    showMoreBtn.innerHTML = '<i class="fas fa-eye-slash"></i> Sembunyikan';
+  }
+}
