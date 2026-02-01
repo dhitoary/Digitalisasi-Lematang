@@ -141,191 +141,319 @@
           </p>
         </div>
 
+        <!-- Filter Categories -->
+        <div class="umkm-filter-container">
+          <button class="umkm-filter-btn active" data-filter="all">Semua</button>
+          <button class="umkm-filter-btn" data-filter="sembako">Sembako</button>
+          <button class="umkm-filter-btn" data-filter="makanan">Makanan & Minuman</button>
+          <button class="umkm-filter-btn" data-filter="cemilan">Cemilan & Keripik</button>
+          <button class="umkm-filter-btn" data-filter="kue">Kue & Bakery</button>
+          <button class="umkm-filter-btn" data-filter="jasa">Jasa</button>
+        </div>
+
         <div class="umkm-products-grid">
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm1')">
+          <div class="umkm-product-card" data-category="sembako">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🏪</div>
+              <img src="img/umkm/warung-kita.jpg" alt="Warung Kita" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Warung Kita</h3>
-            <p class="umkm-product-desc">
-              Toko sembako lengkap untuk kebutuhan sehari-hari
-            </p>
-            <p class="umkm-product-location">
-              📍 Dusun Lubuk Bais, Jl. Abdul Halim
-            </p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Warung Kita</h3>
+              <p class="umkm-product-price">Sembako</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Warung+Kita+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm2')">
+          <div class="umkm-product-card" data-category="sembako">
             <div class="umkm-product-image">
-              <div class="image-placeholder">☕</div>
+              <img src="img/umkm/warung-teh-erna.jpg" alt="Warung Teh Erna" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Warung Teh Erna</h3>
-            <p class="umkm-product-desc">
-              Toko sembako dengan berbagai kebutuhan pokok
-            </p>
-            <p class="umkm-product-location">
-              📍 Dusun Lubuk Bais, Jl. Abdul Halim
-            </p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Warung Teh Erna</h3>
+              <p class="umkm-product-price">Sembako & Minuman</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Warung+Teh+Erna+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm3')">
+          <div class="umkm-product-card" data-category="sembako">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍽️</div>
+              <img src="img/umkm/warung-ibu-tika.jpg" alt="Warung Ibu Tika" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Warung Ibu Tika</h3>
-            <p class="umkm-product-desc">
-              Toko sembako dan gorengan segar setiap hari
-            </p>
-            <p class="umkm-product-location">
-              📍 Sebelah Masjid Al Ikhmah, dekat SDN 2
-            </p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Warung Ibu Tika</h3>
+              <p class="umkm-product-price">Sembako & Gorengan</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Warung+Ibu+Tika+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm4')">
+          <div class="umkm-product-card" data-category="makanan">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍜</div>
+              <img src="img/umkm/warung-budhe.jpg" alt="Warung Budhe" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Warung Budhe</h3>
-            <p class="umkm-product-desc">
-              Warung makan dengan menu lengkap dan harga terjangkau
-            </p>
-            <p class="umkm-product-location">
-              📍 Di depan Warung Ibu Tika, dekat SDN 2
-            </p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Warung Budhe</h3>
+              <p class="umkm-product-price">Warung Makan</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Warung+Budhe+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm5')">
+          <div class="umkm-product-card" data-category="sembako">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🛒</div>
+              <img src="img/umkm/warung-teh-nena.jpg" alt="Warung Teh Nena" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Warung Teh Nena</h3>
-            <p class="umkm-product-desc">
-              Warung kebutuhan sehari-hari dekat sekolah
-            </p>
-            <p class="umkm-product-location">📍 Dekat SDN 2 Lematang</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Warung Teh Nena</h3>
+              <p class="umkm-product-price">Kebutuhan Harian</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Warung+Teh+Nena+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm6')">
+          <div class="umkm-product-card" data-category="sembako">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🌾</div>
+              <img src="img/umkm/warung-ibu-ana.jpg" alt="Warung Ibu Ana" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Warung Ibu Ana</h3>
-            <p class="umkm-product-desc">
-              Warung sembako strategis sebelum gapura desa
-            </p>
-            <p class="umkm-product-location">
-              📍 Depan kebun karet, sebelum SDN 2 & gapura
-            </p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Warung Ibu Ana</h3>
+              <p class="umkm-product-price">Sembako</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Warung+Ibu+Ana+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm7')">
+          <div class="umkm-product-card" data-category="cemilan">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍫</div>
+              <img src="img/umkm/ifra-rasa.jpg" alt="Ifra Rasa" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Ifra Rasa</h3>
-            <p class="umkm-product-desc">
-              Lempok durian dan aneka keripik khas Lampung
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Ifra Rasa</h3>
+              <p class="umkm-product-price">Lempok & Keripik</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Ifra+Rasa+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm8')">
+          <div class="umkm-product-card" data-category="makanan">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍜</div>
+              <img src="img/umkm/baso-azam.jpg" alt="Baso Azam" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Baso Azam</h3>
-            <p class="umkm-product-desc">
-              Bakso enak dengan kuah segar dan isian melimpah
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Baso Azam</h3>
+              <p class="umkm-product-price">Bakso</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Baso+Azam+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm9')">
+          <div class="umkm-product-card" data-category="makanan">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🥟</div>
+              <img src="img/umkm/pempek-bu-kadus-iis.jpg" alt="Pempek Bu Kadus Iis" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Pempek Bu Kadus Iis</h3>
-            <p class="umkm-product-desc">
-              Pempek Palembang asli dengan cuko yang mantap
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Pempek Bu Kadus Iis</h3>
+              <p class="umkm-product-price">Pempek Palembang</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Pempek+Bu+Kadus+Iis+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm10')">
+          <div class="umkm-product-card" data-category="cemilan">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍌</div>
+              <img src="img/umkm/keripik-pisang.jpg" alt="Keripik Pisang" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Keripik Pisang Bu Rodiah</h3>
-            <p class="umkm-product-desc">
-              Keripik pisang renyah dan gurih tanpa pengawet
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Keripik Pisang Bu Rodiah</h3>
+              <p class="umkm-product-price">Keripik Pisang</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Keripik+Pisang+Bu+Rodiah+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm11')">
+          <div class="umkm-product-card" data-category="kue">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🎂</div>
+              <img src="img/umkm/aneka-kue.jpg" alt="Aneka Kue" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Aneka Kue Ibu Ida</h3>
-            <p class="umkm-product-desc">
-              Berbagai kue tradisional dan kue basah segar
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Aneka Kue Ibu Ida</h3>
+              <p class="umkm-product-price">Kue Tradisional</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Aneka+Kue+Ibu+Ida+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm12')">
+          <div class="umkm-product-card" data-category="jasa">
             <div class="umkm-product-image">
-              <div class="image-placeholder">💇</div>
+              <img src="img/umkm/salon.jpg" alt="Salon" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Salon Ibu Lena</h3>
-            <p class="umkm-product-desc">
-              Salon kecantikan dengan berbagai treatment rambut
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Salon Ibu Lena</h3>
+              <p class="umkm-product-price">Salon Kecantikan</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Salon+Ibu+Lena+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm13')">
+          <div class="umkm-product-card" data-category="jasa">
             <div class="umkm-product-image">
-              <div class="image-placeholder">💐</div>
+              <img src="img/umkm/buket.jpg" alt="Buket" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Buket Ibu Dwi</h3>
-            <p class="umkm-product-desc">
-              Buket bunga dan hadiah untuk berbagai acara
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Buket Ibu Dwi</h3>
+              <p class="umkm-product-price">Buket & Hadiah</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Buket+Ibu+Dwi+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm14')">
+          <div class="umkm-product-card" data-category="kue">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍰</div>
+              <img src="img/umkm/kue-bolu.jpg" alt="Kue Bolu" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Kue Bolu & Kukur Ibu Revi</h3>
-            <p class="umkm-product-desc">
-              Kue bolu lembut dan kukur manis untuk oleh-oleh
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Kue Bolu & Kukur Ibu Revi</h3>
+              <p class="umkm-product-price">Kue Bolu & Kukur</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Kue+Bolu+Ibu+Revi+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm15')">
+          <div class="umkm-product-card" data-category="makanan">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🍗</div>
+              <img src="img/umkm/fried-chicken.jpg" alt="Fried Chicken" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Fried Chicken Ibu Tiara</h3>
-            <p class="umkm-product-desc">
-              Ayam goreng crispy dengan bumbu rahasia
-            </p>
-            <p class="umkm-product-location">📧 Info segera hadir</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Fried Chicken Ibu Tiara</h3>
+              <p class="umkm-product-price">Ayam Goreng Crispy</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Fried+Chicken+Ibu+Tiara+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="umkm-product-card" onclick="openUMKMModal('umkm16')">
+          <div class="umkm-product-card" data-category="jasa">
             <div class="umkm-product-image">
-              <div class="image-placeholder">🎉</div>
+              <img src="img/umkm/print-kue.jpg" alt="Print Kue" onerror="this.src='img/logo.png'" />
             </div>
-            <h3 class="umkm-product-title">Tempat Print Kue</h3>
-            <p class="umkm-product-desc">
-              Jasa print gambar edible untuk kue ulang tahun
-            </p>
-            <p class="umkm-product-location">📍 Depan Balai Desa</p>
+            <div class="umkm-product-content">
+              <h3 class="umkm-product-title">Tempat Print Kue</h3>
+              <p class="umkm-product-price">Jasa Print Edible</p>
+              <div class="umkm-buttons">
+                <a href="https://maps.google.com/?q=Tempat+Print+Kue+Lematang" target="_blank" class="umkm-btn-maps">
+                  <i class="fas fa-map-marker-alt"></i> Maps
+                </a>
+                <a href="https://wa.me/62XXXXXXXXXXX" target="_blank" class="umkm-btn-whatsapp">
+                  <i class="fab fa-whatsapp"></i> Chat
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maps Section -->
+        <div class="umkm-map-section">
+          <h3>Lokasi UMKM Desa Lematang</h3>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126842.89285235394!2d105.27309743125!3d-5.040199999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c3e7b8b7b7b7%3A0x1234567890abcdef!2sDesa%20Lematang!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid" 
+              width="100%" 
+              height="450" 
+              style="border:0; border-radius: 12px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 
@@ -456,5 +584,6 @@
     <!-- Scripts -->
     <script src="js/includes.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/umkm-filter.js"></script>
   </body>
 </html>

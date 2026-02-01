@@ -219,12 +219,45 @@
   margin-top: 2rem;
 }
 
-.org-level {
+.org-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.org-row-1 {
+  justify-content: center;
+}
+
+.org-row-2 {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.org-row-3 {
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.org-row-3b {
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.org-row-4 {
+  margin-bottom: 0;
+}
+
+.org-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .org-box {
@@ -289,9 +322,10 @@
 
 .kadus-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
   width: 100%;
+  max-width: 1200px;
 }
 
 .org-box.kadus {
