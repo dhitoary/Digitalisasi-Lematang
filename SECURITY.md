@@ -3,23 +3,28 @@
 ## ⚠️ ANCAMAN UMUM UNTUK WEBSITE PEMERINTAH DESA
 
 ### 1. **Hack Judi Online (Judol)**
+
 Website desa sering di-hack untuk menyisipkan:
+
 - Link judi online / slot online
 - Redirect ke situs judi
 - Hidden spam links untuk SEO judi
 - Iframe tersembunyi berisi konten judi
 
 ### 2. **Defacement**
+
 - Tampilan website diubah oleh hacker
 - Logo/konten diganti dengan pesan hacker
 - Merusak reputasi pemerintah desa
 
 ### 3. **Malware & Phishing**
+
 - Menyisipkan malware untuk mencuri data
 - Fake login page untuk curi password
 - Spam email mengatasnamakan desa
 
 ### 4. **SQL Injection**
+
 - Serangan ke database (jika ada form)
 - Mencuri data warga
 - Menghapus data penting
@@ -27,6 +32,7 @@ Website desa sering di-hack untuk menyisipkan:
 ## ✅ PROTEKSI YANG SUDAH DITERAPKAN
 
 ### 1. Security Headers (vercel.json)
+
 ```
 ✓ X-Content-Type-Options: nosniff - Cegah MIME type sniffing
 ✓ X-Frame-Options: DENY - Cegah clickjacking
@@ -37,7 +43,9 @@ Website desa sering di-hack untuk menyisipkan:
 ```
 
 ### 2. Content Security Policy (CSP)
+
 Membatasi:
+
 - Script hanya dari domain sendiri dan CDN terpercaya
 - Tidak boleh inline script berbahaya
 - Tidak boleh eval() atau Function()
@@ -45,6 +53,7 @@ Membatasi:
 - Tidak boleh object/embed dari luar
 
 ### 3. Hosting Security (Vercel)
+
 - ✅ HTTPS otomatis
 - ✅ DDoS protection
 - ✅ CDN global
@@ -55,7 +64,9 @@ Membatasi:
 ### A. MONITORING RUTIN (WAJIB!)
 
 #### 1. Cek Website Setiap Hari
+
 **Yang Harus Dicek:**
+
 ```
 □ Apakah tampilan website normal?
 □ Ada link/konten aneh yang tidak Anda buat?
@@ -69,6 +80,7 @@ Membatasi:
 ```
 
 #### 2. Tools untuk Monitoring
+
 ```
 1. Google Search Console
    - Cek "Security Issues"
@@ -93,6 +105,7 @@ Membatasi:
 ### B. BEST PRACTICES
 
 #### 1. Credentials Security
+
 ```bash
 ✓ Jangan share password Vercel/GitHub
 ✓ Gunakan password kuat (min 16 karakter)
@@ -102,6 +115,7 @@ Membatasi:
 ```
 
 #### 2. GitHub Repository
+
 ```bash
 ✓ Private repository lebih baik
 ✓ Jangan commit file dengan credential
@@ -111,6 +125,7 @@ Membatasi:
 ```
 
 #### 3. Domain & DNS
+
 ```bash
 ✓ Lock domain di registrar
 ✓ Gunakan DNS yang aman (Cloudflare)
@@ -121,6 +136,7 @@ Membatasi:
 ### C. BACKUP RUTIN
 
 #### Backup Otomatis
+
 ```bash
 # GitHub sudah otomatis menjadi backup
 # Tapi buat backup lokal juga:
@@ -139,6 +155,7 @@ Membatasi:
 ### D. UPDATE DEPENDENCIES
 
 #### Cek Update Rutin
+
 ```bash
 # Cek dependencies yang usang/vulnerable
 npm outdated
@@ -156,6 +173,7 @@ npm audit fix
 ### Langkah Darurat:
 
 #### 1. SEGERA
+
 ```
 1. Ambil screenshot sebagai bukti
 2. Catat waktu kejadian
@@ -164,6 +182,7 @@ npm audit fix
 ```
 
 #### 2. RECOVERY
+
 ```
 1. Roll back ke versi sebelumnya di Vercel
    - Deployment History > Roll back
@@ -179,6 +198,7 @@ npm audit fix
 ```
 
 #### 3. INVESTIGASI
+
 ```
 1. Cek log Vercel
 2. Cek Git history - siapa yang commit?
@@ -189,6 +209,7 @@ npm audit fix
 ```
 
 #### 4. POST-INCIDENT
+
 ```
 1. Buat laporan kejadian
 2. Submit ke Google (jika kena blacklist)
@@ -229,17 +250,20 @@ npm audit fix
 ## 🔐 KONTAK DARURAT
 
 **Jika Website Di-hack:**
+
 1. Developer/Tim IT Desa
 2. Email: kknlematang2026@gmail.com
 3. Instagram: @kkndesalematang
 
 **Lapor ke Google (jika di-blacklist):**
+
 - Google Search Console > Security Issues
 - https://safebrowsing.google.com/safebrowsing/report_error/
 
 ## 📚 RESOURCES
 
 ### Security Tools (Free)
+
 - Google Search Console: https://search.google.com/search-console
 - Google Safe Browsing: https://transparencyreport.google.com/safe-browsing
 - VirusTotal: https://www.virustotal.com
@@ -247,6 +271,7 @@ npm audit fix
 - SSL Labs: https://www.ssllabs.com/ssltest/
 
 ### Learning Resources
+
 - OWASP Top 10: https://owasp.org/www-project-top-ten/
 - Web Security Academy: https://portswigger.net/web-security
 
