@@ -1,0 +1,67 @@
+# Security Headers untuk Apache (jika pindah dari Vercel ke hosting lain)
+
+# Disable directory browsing
+Options -Indexes
+
+# Prevent directory listing
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Protect against XSS attacks
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Content Security Policy
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://www.google.com; connect-src 'self'; object-src 'none';"
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to backup and source files
+<FilesMatch "(\.md|\.json|\.yml|\.yaml|package\.json|composer\.json|\.git)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Prevent SQL injection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    RewriteRule ^(.*)$ index.html [F,L]
+</IfModule>
+
+# Block bad bots
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} (msnbot|Purebot|Baiduspider|Lipperhey|Mail\.Ru|scrapbot) [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} (httrack|htmlparser|libwww|wget|curl|php) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# Protect wp-config if WordPress ever used
+<files wp-config.php>
+    order allow,deny
+    deny from all
+</files>
+
+# Disable XML-RPC
+<Files xmlrpc.php>
+    order deny,allow
+    deny from all
+</Files>
