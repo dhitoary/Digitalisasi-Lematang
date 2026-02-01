@@ -8,7 +8,6 @@
   }
 
   .navbar .container {
-    flex-wrap: wrap;
     padding: 0.8rem 15px;
     position: relative;
     z-index: 10000;
@@ -32,7 +31,10 @@
     padding: 1rem 0;
     border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     z-index: 9999;
   }
 
@@ -60,6 +62,7 @@
   /* Hero */
   .hero-slider {
     max-height: 650px;
+    margin-top: 60px;
   }
 
   .hero-content h1 {
@@ -84,6 +87,10 @@
   }
 
   /* Page Header */
+  .page-header {
+    padding-top: 110px;
+  }
+
   .page-header h1 {
     font-size: 2rem;
   }
@@ -153,10 +160,6 @@
 /* Mobile Styles - Max Width 480px */
 @media (max-width: 480px) {
   /* Base */
-  body {
-    padding-top: 50px;
-  }
-
   .container {
     padding: 0 10px;
     max-width: 100%;
@@ -187,7 +190,10 @@
   }
 
   .nav-menu {
-    position: relative;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     z-index: 9999;
   }
 
@@ -204,6 +210,7 @@
   .hero-slider {
     max-height: 320px;
     min-height: 280px;
+    margin-top: 50px;
   }
 
   .hero-content {
@@ -250,7 +257,7 @@
 
   /* Page Header */
   .page-header {
-    padding: 40px 10px;
+    padding: 90px 10px 40px;
   }
 
   .page-header h1 {

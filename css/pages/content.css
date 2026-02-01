@@ -379,11 +379,7 @@
 }
 
 .stat-card {
-  background: linear-gradient(
-    135deg,
-    var(--white) 0%,
-    var(--light-cream) 100%
-  );
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-cream) 100%);
   padding: 2.5rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -414,39 +410,6 @@
   color: var(--text-light);
   font-size: 1rem;
   margin: 0;
-}
-
-/* CTA Box */
-.cta-box {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
-  color: var(--white);
-  padding: 3rem 2rem;
-  border-radius: var(--radius-xl);
-  text-align: center;
-  margin-top: 3rem;
-  box-shadow: var(--shadow-lg);
-}
-
-.cta-box h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--white);
-}
-
-.cta-box p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  opacity: 0.95;
-}
-
-.contact-info {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
 }
 
 /* Market Info */
