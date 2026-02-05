@@ -219,6 +219,24 @@
   margin-top: 2rem;
 }
 
+/* Organization Structure Image */
+.org-structure-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.org-chart-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-normal);
+}
+
+.org-chart-img:hover {
+  transform: scale(1.02);
+}
+
 .org-row {
   display: flex;
   justify-content: center;
