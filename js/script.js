@@ -495,11 +495,11 @@ const ModalModule = {
       message: "Halo, saya ingin pesan Baso Azam.",
     },
     umkm9: {
-      title: "PEMPEK BU KADUS IIS",
+      title: "PEMPEK NAJWA (BU KADUS IIS)",
       description:
-        "Pempek Palembang asli dengan cuko yang mantap. Berbagai varian pempek tersedia: lenjer, kapal selam, adaan, dan kulit. Informasi kontak akan segera diperbarui.",
-      image: "img/desa3.jpg",
-      phone: "6281234567890",
+        "Pempek Palembang asli dengan cuko yang mantap. Berbagai varian pempek tersedia: lenjer, kapal selam, adaan, dan kulit. Pempek segar dan nikmat untuk keluarga.",
+      image: "img/umkm/pempek-bu-kadus-iis.jpg",
+      phone: "6285273010704",
       location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
       message: "Halo Bu Kadus Iis, saya ingin pesan pempek.",
     },
@@ -549,11 +549,11 @@ const ModalModule = {
       message: "Halo Ibu Revi, saya ingin pesan kue bolu dan kukur.",
     },
     umkm15: {
-      title: "FRIED CHICKEN IBU TIARA",
+      title: "FRIED CHICKEN ZENA (IBU TIARA)",
       description:
-        "Ayam goreng crispy dengan bumbu rahasia yang gurih dan renyah. Cocok untuk makan keluarga atau acara. Tersedia paket hemat dan bisa pre-order. Info lengkap segera hadir.",
-      image: "img/desa3.jpg",
-      phone: "6281234567890",
+        "Ayam goreng crispy dengan bumbu rahasia yang gurih dan renyah. Cocok untuk makan keluarga atau acara. Tersedia paket hemat dan bisa pre-order.",
+      image: "img/umkm/fried-chicken.jpg",
+      phone: "62089602630513",
       location: "https://maps.google.com/?q=Desa+Lematang+Tanjung+Bintang",
       message: "Halo Ibu Tiara, saya ingin pesan fried chicken.",
     },
@@ -566,6 +566,15 @@ const ModalModule = {
       location:
         "https://maps.google.com/?q=Balai+Desa+Lematang+Tanjung+Bintang",
       message: "Halo, saya ingin print gambar untuk kue.",
+    },
+    umkm17: {
+      title: "TOKO BERON",
+      description:
+        "Toko alat-alat listrik lengkap untuk kebutuhan rumah tangga dan bangunan. Berlokasi dekat Klinik Lematang dengan akses mudah. Menyediakan berbagai peralatan listrik berkualitas.",
+      image: "img/desa2.jpg",
+      phone: "62081273346036",
+      location: "https://maps.google.com/?q=Klinik+Lematang+Tanjung+Bintang",
+      message: "Halo, saya ingin tanya ketersediaan alat listrik di Toko Beron.",
     },
   },
 
